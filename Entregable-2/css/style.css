@@ -1,3 +1,47 @@
+:root{
+    /*Color primario*/
+      --colorPrimario: #274F73;
+  
+      /*Luces*/
+      --luz-P1:#476E91;
+      --luz-P2:#81A1BE;
+      --luz-P3:#AABFD1;
+  
+      /*Sombras*/
+      --sombra-P1:#093E6D;
+      --sombra-P2:#0E3151;
+      --sombra-P3:#02203A;
+
+    /*Color secundario*/
+      --colorSecundario:#592677;
+  
+      /*Luces*/
+      --luz-S1:#794896;
+      --luz-S2:#9558BA;
+      --luz-S3:#AA82C2;
+ 
+      /*Sombras*/
+      --sombra-S1:#390D53;
+      --sombra-S2:#33044E;
+      --sombra-S3:#220335;
+  
+    /*Color acento*/
+      --colorAcento: #FF7A00;
+  
+    /*Blancos y negros*/
+      --blanco: #ECF6FF;
+      --negro:#01101D; 
+  
+    /*Cancelar y aceptar*/
+      --cancelar:#CE1616;
+      --aceptar:#1BC700;
+  
+    /*Fuentes*/
+      --fuente: 'Roboto';
+  }
+
+
+
 *{
     padding: 0;
     margin: 0;
@@ -10,17 +54,23 @@ body{
     width: 100%;
     background-color:#274F73;
 }
-footer{
-   position:relative;
-   width: 100%;
-   height: auto;
-   padding: 30px 20px;
-   background: #02203A;
-   color: white;
-}
+
+/*Footer*/
+footer {
+    height: 40%;
+    width: 100%;
+    background-color:#02203A;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 15px;
+    color: white;
+  }
+
 footer .container{
     display: flex;
     flex-wrap: nowrap;
+    align-items: baseline;
 
 }
 footer .sec-links {
@@ -37,10 +87,153 @@ footer .sec-links ul li a{
     margin-bottom: 10px;
     
 }
-footer .sec-logo{
+footer .logo{
     display: flex;
     flex-wrap: wrap;
-    justify-content:baseline;
+}
+footer .logo ul li {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
 }
 
+
+
+
+/* NAVBAR STYLE */
+
+.navbar-content{
+  width: 100%;
+  height: 100px;
+  background-color: #0E3151;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-navbar{
+  align-items: center;
+  display: flex;
+}
+
+.burger-img{
+  margin-right: 40px;
+  margin-left: 20px;
+}
+
+.center-navbar{
+  align-items: center;
+  display: flex;
+}
+
+.lens-img{
+  margin-left: 250px;
+}
+
+.right-navbar{
+  align-items: center;
+  display: flex;
+}
+
+.user-img{
+  margin-left: 72px;
+  margin-right: 20px;
+}
+
+/* HOME*/
+
+.background-main{
+  background-color: #274F73;
+  height: auto;
+  width: 100%;
+  padding-bottom: 42px;
+}
+
+.game-content{
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.game-frame{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.jugar{
+  position: absolute;
+  width: 174px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: var(--colorAcento);
+  color:var(--blanco);
+  margin-left: 920px;
+  margin-top: 350px;
+}
+
+.section-card{
+  padding-top: 60px;
+  padding-left: 60px;
+}
+
+.font-h1{
+  color:#FFF;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content-card{
+  display: flex;
+  flex-direction: row;
+}
+
+.card{
+  width: 320px;
+  height: 257px;
+  background-color:var(--sombra-S3);
+  margin-right: 56px;
+  margin-top: 21px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px 2px #000;
+  transition: all, 300ms;
+}
+
+.card:hover{
+  transform: scale(1.1);
+}
+
+.content-img-card{
+  width: 320px;
+  height: 181px;
+  margin: 0px;
+}
+
+.img-card{
+  width: 100%;
+  height: 100%;
+}
+
+.content-description{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.font-h2{
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+
+.font-h3{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 
