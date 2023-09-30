@@ -37,7 +37,13 @@
       --aceptar:#1BC700;
   
     /*Fuentes*/
-      --fuente: 'Roboto';
+      --fuente:  Roboto;
+      --tamaño: 25.9px;
+      --estilo:  normal;
+      --weight: 400;
+      --line:  normal;
+      --tamañochico: 10px;
+      --body: 16px;
   }
 
 
@@ -364,12 +370,25 @@ footer .logo ul li {
 }
 
 
-@media only screen and (min-width: 1440px){
+@media only screen and (min-width: 1024px){
+  /*--------HEADER-------*/
   .logo{
     width: 223px;
     height: 105px;
   }
-  /*Footer*/
+  img.menu_cerrado{
+    width: 40px;
+    height: 40px;
+    margin-right: 0px;
+  }
+  .navbar-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  /*---------Footer-----------*/
   .main-footer{
     display: flex;
     align-items: flex-start;
@@ -383,5 +402,173 @@ footer .logo ul li {
     padding: 0px;
     
   }
+   /*---------juego-----------*/
+
+  .juego-linea{
+    width: 897px;
+    height: 536px;
+    margin: 30px;
+
+  }
+
+  .titulo-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 40px;
+   
+  }
+  .titulo-info p{
+    margin-left: 5px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    text-decoration-color: rgba(236, 246, 255, 0.459);
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    
+  }
+  .info-juego{
+    margin: 30px;
+    color: var(--blanco);
+    font-family: var(--fuente);
+    font-size: var(--tamaño);
+    font-style: var(--estilo);
+    font-weight: var(--weight);
+    line-height:var(--line);
+    text-align: justify;
+  }
+
+  .main-footer{
+    grid-area: footer;
+  }
+  .navbar-content{
+    grid-area: header;
+  }
+  .contenedor-juego{
+    grid-area: juego;
+  }
+  .info-juego{
+    grid-area: info;
+  }
+  .similares{
+    grid-area: similares;
+  }
+  .body-juego {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    'header header'
+    'juego similares'
+    'info  similares'
+    'footer footer';
+  }
+
   
+  .gameplays{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .gameplays img{
+    width:375px ;
+    height: 216px;
+  }
+  img.vermas{
+    width: 30px;
+    height: 30px;
+  }
+  .btn-vermas{
+    display: flex;
+    flex-direction: column;
+  }
+  .texto-vermas{
+    font-family: var(--fuente);
+    font-size: var(--tamañochico);
+    font-style: var(--estilo);
+    font-weight: var(--weight);
+    line-height: var(--line);
+    margin-top: 5px;
+    
+  }
+  hr{
+   background-color: var(--blanco);
+   border: 1px solid var(--blanco);
+   width: 891px; 
+   margin-top: 30px;
+   margin-bottom: 10px;
+   opacity: 0.1;
+   
+  }
+  .caja-comentario{
+    background-color: var(--luz-P3);
+    border-radius: 3px;
+    height: 94px;
+    width: 891px;
+
+  }
+  .caja-comentario input{
+    width: 710px;
+    height: 47px;
+    margin: 20px;
+    border-radius: 3px;
+    border: 1px solid var(--blanco);
+  }
+  .btn-enviar{
+    background-color: var(--colorAcento);
+    border: 1px solid var(--colorAcento);
+    color: var(--blanco);
+    width: 112px;
+    height: 48px;
+    border-radius: 10px;
+  }
+  ::placeholder{
+    color: var(--luz-P2);
+    padding-left: 20px;
+  }
+  .usuario-comentarios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+  }
+  .usuario-comentarios .fecha-comentario{
+    margin-left: 5px;
+    font-family: var(--fuente);
+    font-size: var(--tamañochico);
+    line-height: var(--line);
+    font-style: var(--estilo);
+  }
+  .usuario-comentarios .nombre{
+    margin-left: 5px;
+    font-family: var(--fuente);
+    font-size: var(--body);
+    line-height: var(--line);
+    font-style: var(--estilo);
+  }
+  .usuario-comentarios .img-user{
+    width: 30px;
+    height: 30px;
+  }
+  .comentario{
+    font-family: var(--fuente);
+    line-height: var(--line);
+    font-size: var(--body);
+    color: var(--blanco);
+    margin: 15px;
+    margin-bottom: 5px;
+    font-style: var(--estilo);
+  }
+  .comentarios{
+    display:flex;
+    flex-direction: column;
+}
+.mas-comentarios{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 }
