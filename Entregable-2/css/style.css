@@ -44,6 +44,10 @@
       --line:  normal;
       --tamañochico: 10px;
       --body: 16px;
+      --botonesEspaciado: 3.3px;
+      --botonTamaño: 15px;
+      --tamañoPrecio:32px;
+      
   }
 
 
@@ -54,6 +58,7 @@
     text-decoration: none;
     list-style: none;
     font-family: roboto;
+    
 }
 body{
   width: 100%;
@@ -582,4 +587,77 @@ footer .logo ul li {
   margin-right: 30px;
   height: 970px;
 }
+.card-chica{
+  background-color: var(--sombra-S3);
+  width: 320px;
+  height: 257px;
+  border-radius: 10px;
+  margin:10px;
+  margin-top: 50px;
+  position:relative;
+}
+.img-card{
+  width:320px;
+  height:180px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.info-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.btn-agregar{
+  display: flex;
+  justify-content: center;
+  margin-left: 8px;
+  margin-bottom: 10px;
+  margin-top: 18px;
+  background-color: var(--colorPrimario);
+  width: 141px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid var(--colorPrimario);
+  letter-spacing: var(--botonesEspaciado);
+  font-family: var(--fuente);
+  font-size: var(--botonTamaño);
+  color: var(--blanco);
+  padding: 15px;
+  
+}
+.carrito-boton{
+  margin-right: 5px;
+  margin-left: 2px;
+ 
+}
+.precio-card{
+  margin-top: 18px;
+  margin-right: 34px;
+  margin-bottom: 10px;
+  font-family: var(--fuente);
+  font-size: var(--tamañoPrecio);
+  line-height: var(--line);
+  color: var(--colorAcento);
+}
+.card-chica::before {
+    position:absolute;
+    box-sizing:border-box;
+    content:"GRATIS";
+    font-family:var(--fuente);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    color: var(--negro);
+    border-radius: 2px;
+    background: #FFD700;          
+    height:20px;
+    width:119px;
+    background: transparent;
+    border-bottom:25px solid #FFD700;
+     
+    
+    
+
+}
+
 }
