@@ -8,18 +8,60 @@
 </head>
 <body class="body-juego">
      <!--------------------------------HEADER---------------------------------->
-        <header class="navbar-content">    
-            <div class="lef-navbar">
-                <img src="img/menu_cerrado.png" alt="logo" class="menu_cerrado">
+        <!--------------------------------HEADER-NAV--------------------------------->
+    <header class="navbar-content">
+        <div class="left-navbar">
+            <div>
+                <img src="./img/Group.png" class="burger-img" id="burger">
             </div>
-            <div class="center-navbar">
-                <img src="img/Logo.svg" alt="logo" class="logo">
+            <div class="nav-burger desplegar" id="main-burger">
+                <div class="main-nav-burger">
+                    <ul>
+                        <li><img src="img/new.svg" alt="icon" class="icon-menu">Nuevos<div class="sub"></div></li>
+                        <li><img src="img/recientes.svg" alt="icon" class="icon-menu">Recientes<div class="sub"></div></li>
+                    </ul>
+                </div>
+                <div class="second-main-burger">
+                    <li>CATEGORIAS:</li>
+                    <ul>
+                        <li><img src="img/accion.svg" alt="icon" class="icon-menu">Accion <div class="sub"></div></li>
+                        <li><img src="img/aventuras.svg" alt="icon"class="icon-menu">Aventura <div class="sub"></div></li>
+                        <li><img src="img/carreras.svg" alt="icon"class="icon-menu">Carreras <div class="sub"></div></li>
+                        <li><img src="img/cartas.svg" alt="icon"class="icon-menu">Cartas <div class="sub"></div></li>
+                        <li><img src="img/deportes.svg" alt="icon"class="icon-menu">Deporte <div class="sub"></div></li>
+                        <li><img src="img/infantiles.svg" alt="icon"class="icon-menu">Infantil <div class="sub"></div></li>
+                        <li><img src="img/puzzle.svg" alt="icon"class="icon-menu">Puzzle <div class="sub"></div></li>
+                        <li><img src="img/terror.svg" alt="icon"class="icon-menu">Terror <div class="sub"></div></li>
+                    </ul>
+                </div>
             </div>
-            <div class="right-navbar">
-                <img src="img/carrito.png">
-                <img src="img/user.png" class="user-img">
+        </div>
+        <div class="center-navbar">
+            <div class="logo-content">
+                <img src="./img/logo.png" class="logo">
             </div>
-        </header>
+        </div>
+        <div class="right-navbar">
+            <div>
+                <img src="./img/carrito.png">
+                <img src="./img/user.png" class="user-img"id="user-icon">
+            </div>
+            <div class="profile-main desplegar" id="profile">
+                <div class="container-img">
+                    <ul>
+                        <li><img src="./img/user.svg" alt="icon" class="icon-menu-perfil"><p>Mi perfil</p></li>
+                        <li><img src="./img/micuenta.svg" alt="icon" class="icon-menu-perfil"><p>Editar perfil</p></li>
+                        <li><img src="./img/config.svg" alt="icon" class="icon-menu-perfil"><p>Configuracion de cuenta</p></li>
+                        <li><img src="./img/logout.svg" alt="icon"class="icon-menu-perfil"><p>Cerrar sesion</p></li>
+                        <img class="img-profile-redes" src="img/tw_footer.png" alt="">
+                        <img class="img-profile-redes"src="img/ig_footer.png" alt="">
+                        <img class="img-profile-redes"src="img/fb_logo.png" alt="">
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
         <div class="contenedor-juego">
             <img src="img/juegoEnLinea.png" alt="4 en línea" class="juego-linea">
         </div>
@@ -100,17 +142,25 @@
         </div>
         <aside class="similares">
             <div class="card-chica">
+                <div class="ribbon-gratis">GRATIS</div>
                 <img src="img/Cards/Similares/8 ball Pool.avif" alt="juego" class="img-card">
                 <div class="info-card">
                     <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                    <p class="precio-card">$400</p>
                 </div>
             </div>
             <div class="card-chica" class="card-liston">
+                <div class="ribbon-oferta">-10% OFF</div>
                 <img src="img/Cards/Similares/Ajedrez.jpg" alt="juego" class="img-card">
                 <div class="info-card">
                     <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                    
+                    <p class="precio-card">$1200</p>
+                </div>
+            </div>
+            <div class="card-chica" class="card-liston">
+                <img src="img/Cards/Similares/Monopoly.jpg" alt="juego" class="img-card">
+                <div class="info-card">
+                    <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                    <p class="precio-card">$500</p>
                 </div>
             </div>
             
@@ -175,4 +225,5 @@
         </div>     
 </footer>
 </body>
+<script src="js/home.js"></script>
 </html>

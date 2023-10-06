@@ -34,11 +34,11 @@
             <form class="form-regis">
                 <div class="form-primerosinput">
                     <div class="input-group-sup-1">
-                        <label for="username">Nombre y Apellido<span>*</span></label>
+                        <label for="username">Nombre y Apellido<span class="obligatorio">*</span></label>
                         <input class="nombreyapellido" type="text" name="username" id="username" placeholder="Ingresa tu nombre y apellido">
                     </div>
                     <div class="input-group-sup">
-                        <label for="username">Edad<span>*</span></label>
+                        <label for="age">Edad<span class="obligatorio">*</span></label>
                         <input class="edad" type="number" name="edad" id="edad" placeholder="Edad">
                     </div>
                 </div>
@@ -47,30 +47,30 @@
                     <input type="text" name="nickname" id="nickname" placeholder="Ingresa tu nickname">
                 </div>
                 <div class="input-group-regis">
-                    <label for="username">Email<span>*</span></label>
+                    <label for="username">Email<span class="obligatorio">*</span></label>
                     <input type="email" name="username" id="username" placeholder="Ingresa tu email">
                 </div>
                 <div class="input-group-regis">
-                    <label for="password">Contraseña<span>*</span></label>
+                    <label for="password">Contraseña<span class="obligatorio">*</span></label>
                     <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña"> 
                 </div>
                 <div class="input-group-regis">
-                    <label for="password">Repetir Contraseña<span>*</span></label>
+                    <label for="password">Repetir Contraseña<span class="obligatorio">*</span></label>
                     <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña"> 
                 </div>
                 <div class="fin-form-regis">
                     <div class="robot">
                         <div class="check">
                             <input type="checkbox" name="robot" id="robot" value="off">
-                            <p class="tx-small">no soy un robot</p>
+                            <p class="tx-small">NO SOY UN ROBOT</p>
                         </div>
-                        <img src="./img/logo_recaptcha.png" alt="captcha">
+                        <img src="./img/logo_recaptcha.png" alt="captcha" class="logo_recaptcha">
                     </div>
                     <a href="index.html" class="btn-registrarse">REGISTRARSE </a>
                 </div>
             </form>
             <p class="signup-regis">¿Ya tienes cuenta?
-                <a href="login.html" class="">Inicia sesion</a>
+                <a href="login.html" class="signup-iniciar">Inicia sesion</a>
             </p>
         </div>
     </div>

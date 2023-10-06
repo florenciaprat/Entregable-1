@@ -5,61 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FULL GAMES</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 <body class="body-index">
     <!--------------------------------HEADER-NAV--------------------------------->
-    <header class="navbar-content">   
-        
-            <div class="lef-navbar">
-               <img src="img/menu_cerrado.png" alt="logo" class="menu_cerrado">
+    <header class="navbar-content">
+        <div class="left-navbar">
+            <div>
+                <img src="./img/Group.png" class="burger-img" id="burger">
             </div>
-            <div class="center-navbar">
-               <img src="img/Logo.svg" alt="logo" class="logo">
+            <div class="nav-burger desplegar" id="main-burger">
+                <div class="main-nav-burger">
+                    <ul>
+                        <li><img src="img/new.svg" alt="icon" class="icon-menu">Nuevos<div class="sub"></div></li>
+                        <li><img src="img/recientes.svg" alt="icon" class="icon-menu">Recientes<div class="sub"></div></li>
+                    </ul>
+                </div>
+                <div class="second-main-burger">
+                    <li>CATEGORIAS:</li>
+                    <ul>
+                        <li><img src="img/accion.svg" alt="icon" class="icon-menu">Accion <div class="sub"></div></li>
+                        <li><img src="img/aventuras.svg" alt="icon"class="icon-menu">Aventura <div class="sub"></div></li>
+                        <li><img src="img/carreras.svg" alt="icon"class="icon-menu">Carreras <div class="sub"></div></li>
+                        <li><img src="img/cartas.svg" alt="icon"class="icon-menu">Cartas <div class="sub"></div></li>
+                        <li><img src="img/deportes.svg" alt="icon"class="icon-menu">Deporte <div class="sub"></div></li>
+                        <li><img src="img/infantiles.svg" alt="icon"class="icon-menu">Infantil <div class="sub"></div></li>
+                        <li><img src="img/puzzle.svg" alt="icon"class="icon-menu">Puzzle <div class="sub"></div></li>
+                        <li><img src="img/terror.svg" alt="icon"class="icon-menu">Terror <div class="sub"></div></li>
+                    </ul>
+                </div>
             </div>
-            <div class="right-navbar">
-                <img src="img/carrito.png">
-                <img src="img/user.png" class="user-img">
+        </div>
+        <div class="center-navbar">
+            <div class="logo-content">
+                <img src="./img/logo.png" class="logo">
             </div>
-    </header>
+        </div>
+        <div class="right-navbar">
+            <div>
+                <img src="./img/carrito.png">
+                <img src="./img/user.png" class="user-img"id="user-icon">
+            </div>
+            <div class="profile-main desplegar" id="profile">
+                <div class="container-img">
+                    <ul>
+                        <li><img src="./img/user.svg" alt="icon" class="icon-menu-perfil"><p>Mi perfil</p></li>
+                        <li><img src="./img/micuenta.svg" alt="icon" class="icon-menu-perfil"><p>Editar perfil</p></li>
+                        <li><img src="./img/config.svg" alt="icon" class="icon-menu-perfil"><p>Configuracion de cuenta</p></li>
+                        <li><img src="./img/logout.svg" alt="icon"class="icon-menu-perfil"><p>Cerrar sesion</p></li>
+                        <img class="img-profile-redes" src="img/tw_footer.png" alt="">
+                        <img class="img-profile-redes"src="img/ig_footer.png" alt="">
+                        <img class="img-profile-redes"src="img/fb_logo.png" alt="">
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </header> 
     <!---------------------------------MAIN----------------------------------->
-    <div class="main">
-        <main class="background-main">
-            <article class="game-content">
-                <div class="game-frame">
-                    <img src="img/anterior.png" alt="flecha_izq" class="anterior">
-                    <img src="img/fall 1.png" class="game-main">
-                    <img src="img/siguiente.png" alt="flecha_der" class="siguiente">
-                </div>
-            </article>
-            <section class="section-card">
-                <h1 class="font-h1">Para Ti</h1>
-                <div class="content-card">
-                    <div class="card">
-                        <div class="content-img-card">
-                            <img src="" class="img-card">
-                        </div>
-                        <div class="content-description">
-                            <h2 class="font-h2">
-                                Spiderman Miles Morales
-                            </h2>
-                        
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img-card">
-                            <img src="" class="img-card">
-                        </div>
-                        <div class="content-description">
-                            <h2 class="font-h2">
-                                Fortnite
-                            </h2>
-                        
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+            <div class="carousel-item">
+                <img src="img/Slider 3.png">
+            </div>
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+                <img src="img/Slider 2.jpg">
+            </div>
+            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+                <img src="img/Slider 1.webp">
+            </div>
+            <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+            <label for="carousel-2" class="carousel-control next control-1">›</label>
+            <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+            <label for="carousel-3" class="carousel-control next control-2">›</label>
+            <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+            <label for="carousel-1" class="carousel-control next control-3">›</label>
+            <ol class="carousel-indicators">
+                <li>
+                    <label for="carousel-1" class="carousel-bullet">•</label>
+                </li>
+                <li>
+                    <label for="carousel-2" class="carousel-bullet">•</label>
+                </li>
+                <li>
+                    <label for="carousel-3" class="carousel-bullet">•</label>
+                </li>
+            </ol>
+        </div>
     </div>
+    
+    <section class="background-main">
+        <div class="parati">
+            <div class="card-chica">
+                <div class="ribbon-gratis">GRATIS</div>
+                <img src="img/Cards/Para Ti/cyberpunk 2077.jpg" alt="juego" class="img-card">
+                <div class="info-card">
+                    <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                </div>
+            </div>
+            <div class="card-chica" class="card-liston">
+                <div class="ribbon-oferta">-10% OFF</div>
+                <img src="img/Cards/Para Ti/Far cry 6.jpg" alt="juego" class="img-card">
+                <div class="info-card">
+                    <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                    <p class="precio-card">$1200</p>
+                </div>
+            </div>
+            <div class="card-chica" class="card-liston">
+                <img src="img/Cards/Para Ti/Fortnite.png" alt="juego" class="img-card">
+                <div class="info-card">
+                    <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                    <p class="precio-card">$500</p>
+                </div>
+            </div>
+            <div class="card-chica" class="card-liston">
+                <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
+                <div class="info-card">
+                    <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                    <p class="precio-card">$500</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+      
     <!---------------------------------FOOTER----------------------------------->
     <footer class="main-footer">
        
@@ -115,4 +187,6 @@
             </div>     
     </footer>
 </body>
+
+<script src="js/home.js"></script>
 </html>
