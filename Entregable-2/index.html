@@ -37,12 +37,12 @@
         </div>
         <div class="center-navbar">
             <div class="logo-content">
-                <img src="./img/logo.png" class="logo">
+                <a href="progress.html"><img src="./img/logo.png" class="logo"></a> 
             </div>
         </div>
         <div class="right-navbar">
             <div>
-                <img src="./img/carritoo.svg">
+                <img src="./img/carritoo.svg" class="img-carrito">
                 <img src="./img/user.svg" class="user-img"id="user-icon">
             </div>
             <div class="profile-main desplegar" id="profile">
@@ -69,16 +69,19 @@
                 <div class="carousel-item">
                     <img src="img/Slider 3.png">
                     <a href="#" class="btn btn-4">JUGAR AHORA</a>
+                    <p class="nuevos-semana">NUEVOS DE LA SEMANA...</p>
                 </div>
                 <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
                 <div class="carousel-item">
                     <img src="img/Slider 2.jpg">
                     <a href="#" class="btn btn-4">JUGAR AHORA</a>
+                    <p class="nuevos-semana">NUEVOS DE LA SEMANA...</p>
                 </div>
                 <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
                 <div class="carousel-item">
                     <img src="img/Slider 1.webp">
                     <a href="#" class="btn btn-4">JUGAR AHORA</a>
+                    <p class="nuevos-semana">NUEVOS DE LA SEMANA...</p>
                 </div>
                 <label for="carousel-3" class="carousel-control prev control-1">‹</label>
                 <label for="carousel-2" class="carousel-control next control-1">›</label>
@@ -103,688 +106,531 @@
     
     <p class="titulos-home">MÁS JUGADOS</p>
     <section class="background-main"> 
-        <div class="contenedor-principal">
-            <div class="contenedor">
-                <img src="img/siguente (2).svg" class="btn-izq" alt="" onclick="slideIzq(this)">
-                <div class="container-carrousel">
-                    <div class="carrousel">
-
-                        <div class="card-chica">
-                            <div class="ribbon-gratis">GRATIS</div>
-                            <img src="img/Cards/Para Ti/cyberpunk 2077.jpg" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>Cyberpunk</h3>
-                            </div>
+        <section class="main">
+            <div class="carruselprincipal">
+                <div class="cincocards1">
+                    <div class="card-chica" >
+                        <div class="ribbon-gratis">GRATIS</div>
+                        <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
                         </div>
-
-                        <div class="card-chica" class="card-liston">
-                            <div class="ribbon-oferta">-10% OFF</div>
-                            <img src="img/Cards/Para Ti/Far cry 6.jpg" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$1200</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>AVENGERS</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Fortnite.png" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+        
+                    <div class="card-chica">
+                        <img src="img/Cards/Para Ti/cyberpunk 2077.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$7900</p>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>CYBERPUNK</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+               
+                    <div class="card-chica" >
+                        <div class="ribbon-oferta"><img src="img/carritoo.svg" alt="agregado al carrito" class="carrito-card"></div>
+                        <img src="img/Cards/Para Ti//The sims 4.webp" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-añadido">AÑADIDO</button>
+                            <p class="precio-card">$2400</p>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>THE SIMS 4</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <img src="img/Cards/Para Ti//The walking dead game.webp" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$4100</p>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>THE WALKING DEAD</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        
                     </div>
                 </div>
-                <img src="img/anterior.svg" class="btn-der" alt=""onclick="slideDer(this)">    
+        
+                <div class="cincocards2">
+                    <div class="card-chica" >
+                        <img src="img/Cards/Para Ti//The last of us 1.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$3200</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>THE LAST OF US</h3>
+                        </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <div class="ribbon-gratis">GRATIS</div>
+                        <img src="img/Cards/Para Ti/Far cry 6.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            
+                        </div>
+                        <div class="card-nombre">
+                            <h3>FAR CRY</h3>
+                        </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <img src="img/Cards/Para Ti/Hit and run SImpsons.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$6200</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>HIT AND RUN</h3>
+                        </div>
+                    </div>
+               
+                    <div class="card-chica">
+                        <div class="ribbon-oferta">-15% OFF</div>
+                        <img src="img/Cards/Para Ti/Spiderman miles morales.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$500</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>SPIDERMAN MILES MORALES</h3>
+                        </div>
+                    </div>
+        
+                    
+                </div>
+                <div class="btn-left-cards "><img class="izq-rotacion" src="img/izquierda.svg"><i class='bx bx-chevron-left'></i></div>
+                <div class="btn-right-cards "><img class="der-rotacion" src="img/derecha.svg"><i class='bx bx-chevron-right'></i></div>
             </div>
-        </div>
+        </section>
     </section>
     <p class="titulos-home">PARA TÍ</p>
-    <section class="background-main"> 
-        <div class="contenedor-principal">
-            <div class="contenedor">
-                <img src="img/siguente (2).svg" class="btn-izq" alt="" onclick="slideIzq(this)">
-                <div class="container-carrousel">
-                    <div class="carrousel">
-
-                        <div class="card-chica">
-                            <div class="ribbon-gratis">GRATIS</div>
-                            <img src="img/Cards/Para Ti/cyberpunk 2077.jpg" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>Cyberpunk</h3>
-                            </div>
-                        </div>
-
-                        <div class="card-chica" class="card-liston">
-                            <div class="ribbon-oferta">-10% OFF</div>
-                            <img src="img/Cards/Para Ti/Far cry 6.jpg" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$1200</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Fortnite.png" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        
+    <section class="main">
+        <div class="carruselprincipal">
+            <div class="cincocards1">
+                <div class="card-chica" >
+                    <img src="img/Cards/Mas jugados/Among us.png" alt="juego" class="img-card">
+                    <div class="info-card">
+                        <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                        <p class="precio-card">$1200</p>
+                    </div>
+                    <div class="card-nombre">
+                        <h3>AMOUNG US</h3>
                     </div>
                 </div>
-                <img src="img/anterior.svg" class="btn-der" alt=""onclick="slideDer(this)">    
+    
+                <div class="card-chica">
+                    <div class="ribbon-gratis">GRATIS</div>
+                    <img src="img/Cards/Mas jugados/Fireboy and WaterGirl.webp" alt="juego" class="img-card">
+                    <div class="info-card">
+                        <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                        
+                    </div>
+                    <div class="card-nombre">
+                        <h3>FIREBOY AND WATERGIRL</h3>
+                    </div>
+                </div>
+           
+                <div class="card-chica" >
+                    <img src="img/Cards/Mas jugados/Game of thornes.jpg" alt="juego" class="img-card">
+                    <div class="info-card">
+                        <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                        <p class="precio-card">$500</p>
+                    </div>
+                    <div class="card-nombre">
+                        <h3>GAMES OF THRONES</h3>
+                    </div>
+                </div>
+    
+                <div class="card-chica" >
+                    <div class="ribbon-oferta">-10% OFF</div>
+                    <img src="img/Cards/Mas jugados/Minecraft.png" alt="juego" class="img-card">
+                    <div class="info-card">
+                        <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                        <p class="precio-card">$4500</p>
+                    </div>
+                    <div class="card-nombre">
+                        <h3>cyberpunk</h3>
+                    </div>
+                </div>
             </div>
+    
+            <div class="cincocards2">
+                <div class="card-chica" >
+                    <img src="img/Cards/Mas jugados/Gta 5.jpg" alt="juego" class="img-card">
+                    <div class="info-card">
+                        <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                        <p class="precio-card">$12450</p>
+                    </div>
+                    <div class="card-nombre">
+                        <h3>GTA 5</h3>
+                    </div>
+                </div>
+    
+                <div class="card-chica" >
+                    <div class="ribbon-oferta">-25% OFF</div>
+                    <img src="img/Cards/Mas jugados/Counter Stike.jpg" alt="juego" class="img-card">
+                    <div class="info-card">
+                        <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                        <p class="precio-card">$7820</p>
+                    </div>
+                    <div class="card-nombre">
+                        <h3>COUNTER STRIKE</h3>
+                    </div>
+                </div>
+    
+                <div class="card-chica" >
+                    <img src="img/Cards/Mas jugados/grand_theft_auto_online.jpg" alt="juego" class="img-card">
+                    <div class="info-card">
+                        <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                        <p class="precio-card">$2300</p>
+                    </div>
+                    <div class="card-nombre">
+                        <h3>GRAND THEFT AUTO</h3>
+                    </div>
+                </div>
+           
+                <div class="card-chica">
+                    <div class="ribbon-gratis">GRATIS</div>
+                    <img src="img/Cards/Mas jugados/Minecraft.png" alt="juego" class="img-card">
+                    <div class="info-card">
+                        <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                        
+                    </div>
+                    <div class="card-nombre">
+                        <h3>MINECRAFT</h3>
+                    </div>
+                </div>
+    
+                
+            </div>
+            <div class="btn-left-cards "><img class="izq-rotacion" src="img/izquierda.svg"><i class='bx bx-chevron-left'></i></div>
+            <div class="btn-right-cards "><img class="der-rotacion" src="img/derecha.svg"><i class='bx bx-chevron-right'></i></div>
         </div>
     </section>
+</section>
     <p class="titulos-home">ACCIÓN</p>
     <section class="background-main"> 
-        <div class="contenedor-principal">
-            <div class="contenedor">
-                <img src="img/siguente (2).svg" class="btn-izq" alt="" onclick="slideIzq(this)">
-                <div class="container-carrousel">
-                    <div class="carrousel">
-
-                        <div class="card-chica">
-                            <div class="ribbon-gratis">GRATIS</div>
-                            <img src="img/Cards/Para Ti/cyberpunk 2077.jpg" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>Cyberpunk</h3>
-                            </div>
+        <section class="main">
+            <div class="carruselprincipal">
+                <div class="cincocards1">
+                    <div class="card-chica" >
+                        <img src="img/Cards/Accion/Assasins Creed valhalla.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$8400</p>
                         </div>
-
-                        <div class="card-chica" class="card-liston">
-                            <div class="ribbon-oferta">-10% OFF</div>
-                            <img src="img/Cards/Para Ti/Far cry 6.jpg" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$1200</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>ASSASINS CREED VALHALLA</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Fortnite.png" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+        
+                    <div class="card-chica">
+                        <div class="ribbon-gratis">GRATIS</div>
+                        <img src="img/Cards/Accion/crysis 3.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>CRISIS 3</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+               
+                    <div class="card-chica" >
+                        <img src="img/Cards/Accion/Dead by daylight.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$5900</p>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>DEAD BY DAYLIGHT</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <img src="img/Cards/Accion/Gears of war 3.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$2500</p>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>GEAR OF WAR</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        
                     </div>
                 </div>
-                <img src="img/anterior.svg" class="btn-der" alt=""onclick="slideDer(this)">    
+        
+                <div class="cincocards2">
+                    <div class="card-chica" >
+                        <div class="ribbon-oferta">-15% OFF</div>
+                        <img src="img/Cards/Accion/Uncharted 4.webp" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$6200</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>UNCHARTED</h3>
+                        </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <img src="img/Cards/Accion/Assassins Creed Odyssey.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$4200</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>ASSASINS CREED ODYSSEY</h3>
+                        </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <div class="ribbon-oferta">-25% OFF</div>
+                        <img src="img/Cards/Accion/Resident evil 6.png" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$7800</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>RESIDENT EVIL 6</h3>
+                        </div>
+                    </div>
+               
+                    <div class="card-chica">
+                        <img src="img/Cards/Accion/Call of duty Modern Warfare 2 remastered.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$18900</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>CALL OF DUTY</h3>
+                        </div>
+                    </div>
+        
+                    
+                </div>
+                <div class="btn-left-cards "><img class="izq-rotacion" src="img/izquierda.svg"><i class='bx bx-chevron-left'></i></div>
+                <div class="btn-right-cards "><img class="der-rotacion" src="img/derecha.svg"><i class='bx bx-chevron-right'></i></div>
             </div>
-        </div>
+        </section>
+    </section>
     </section>
     <p class="titulos-home">DEPORTES</p>
     <section class="background-main"> 
-        <div class="contenedor-principal">
-            <div class="contenedor">
-                <img src="img/siguente (2).svg" class="btn-izq" alt="" onclick="slideIzq(this)">
-                <div class="container-carrousel">
-                    <div class="carrousel">
-
-                        <div class="card-chica">
-                            <div class="ribbon-gratis">GRATIS</div>
-                            <img src="img/Cards/Para Ti/cyberpunk 2077.jpg" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>Cyberpunk</h3>
-                            </div>
+        <section class="main">
+            <div class="carruselprincipal">
+                <div class="cincocards1">
+                    <div class="card-chica" >
+                        <img src="img/Cards/Deportes/basketball club story.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$2300</p>
                         </div>
-
-                        <div class="card-chica" class="card-liston">
-                            <div class="ribbon-oferta">-10% OFF</div>
-                            <img src="img/Cards/Para Ti/Far cry 6.jpg" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$1200</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>BACKETBALL CLUB STORY</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Fortnite.png" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+        
+                    <div class="card-chica">
+                        <img src="img/Cards/Deportes/fifa 23.webp" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">23900</p>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>FC 24</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+               
+                    <div class="card-chica" >
+                        <div class="ribbon-gratis">GRATIS</div>
+                        <img src="img/Cards/Deportes/Forza horizon 5.webp" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>FORZA HORIZON 5</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <img src="img/Cards/Deportes/Nba 2k24.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$2300</p>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>NBA 2K24</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        
                     </div>
                 </div>
-                <img src="img/anterior.svg" class="btn-der" alt=""onclick="slideDer(this)">    
+        
+                <div class="cincocards2">
+                    <div class="card-chica" >
+                        <div class="ribbon-oferta">-15% OFF</div>
+                        <img src="img/Cards/Deportes/Fishing planet.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$1670</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>FISHING PLANET</h3>
+                        </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <div class="ribbon-gratis">GRATIS</div>
+                        <img src="img/Cards/Deportes/Golf it.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                           
+                        </div>
+                        <div class="card-nombre">
+                            <h3>GOLF IT</h3>
+                        </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <img src="img/Cards/Deportes/Football manager 2023.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$5800</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>FOOTBALL MANAGER 2023</h3>
+                        </div>
+                    </div>
+               
+                    <div class="card-chica">
+                        <img src="img/Cards/Deportes/NFS Need for speed heat.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$7200</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>NEED FOR SPEED</h3>
+                        </div>
+                    </div>
+        
+                    
+                </div>
+                <div class="btn-left-cards "><img class="izq-rotacion" src="img/izquierda.svg"><i class='bx bx-chevron-left'></i></div>
+                <div class="btn-right-cards "><img class="der-rotacion" src="img/derecha.svg"><i class='bx bx-chevron-right'></i></div>
             </div>
-        </div>
+        </section>
+    </section>
     </section>
     <p class="titulos-home">INFANTILES</p>
     <section class="background-main"> 
-        <div class="contenedor-principal">
-            <div class="contenedor">
-                <img src="img/siguente (2).svg" class="btn-izq" alt="" onclick="slideIzq(this)">
-                <div class="container-carrousel">
-                    <div class="carrousel">
-
-                        <div class="card-chica">
-                            <div class="ribbon-gratis">GRATIS</div>
-                            <img src="img/Cards/Para Ti/cyberpunk 2077.jpg" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>Cyberpunk</h3>
-                            </div>
+        <section class="main">
+            <div class="carruselprincipal">
+                <div class="cincocards1">
+                    <div class="card-chica" >
+                        <img src="img/Cards/Infantiles/Angry birds.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$2300</p>
                         </div>
-
-                        <div class="card-chica" class="card-liston">
-                            <div class="ribbon-oferta">-10% OFF</div>
-                            <img src="img/Cards/Para Ti/Far cry 6.jpg" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$1200</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>ANGRY BIRDS</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Fortnite.png" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+        
+                    <div class="card-chica">
+                        <img src="img/Cards/Infantiles/Ben 10 Power trip.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$1200</p>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>BEN 10 POWE TRIP</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+               
+                    <div class="card-chica" >
+                        <div class="ribbon-gratis">GRATIS</div>
+                        <img src="img/Cards/Infantiles/Subway surfers.png" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                          
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>SUBWAY SURFERS</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <div class="ribbon-oferta">-25% OFF</div>
+                        <img src="img/Cards/Infantiles/Overcooked 2.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$3200</p>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
+                        <div class="card-nombre">
+                            <h3>OVERCOOKED 2</h3>
                         </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        <div class="card-chica" class="card-liston">
-                            <img src="img/Cards/Para Ti/Avengers.webp" alt="juego" class="img-card">
-                            <div class="info-card">
-                                <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
-                                <p class="precio-card">$500</p>
-                            </div>
-                            <div class="card-nombre">
-                                <h3>cyberpunk</h3>
-                            </div>
-                        </div>
-                        
                     </div>
                 </div>
-                <img src="img/anterior.svg" class="btn-der" alt=""onclick="slideDer(this)">    
+        
+                <div class="cincocards2">
+                    <div class="card-chica" >
+                        <img src="img/Cards/Infantiles/Cars.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$1900</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>CARS</h3>
+                        </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <img src="img/Cards/Infantiles/Fruit ninja.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$2700</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>FRUIT NINJA</h3>
+                        </div>
+                    </div>
+        
+                    <div class="card-chica" >
+                        <div class="ribbon-gratis">GRATIS</div>
+                        <img src="img/Cards/Infantiles/Roblox.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                          
+                        </div>
+                        <div class="card-nombre">
+                            <h3>ROBLOX</h3>
+                        </div>
+                    </div>
+               
+                    <div class="card-chica">
+                        <img src="img/Cards/Infantiles/Educational Games for kids.jpg" alt="juego" class="img-card">
+                        <div class="info-card">
+                            <button class="btn-agregar"><img src="img/cart.png" alt="carrito" class="carrito-boton">AGREGAR</button>
+                            <p class="precio-card">$3200</p>
+                        </div>
+                        <div class="card-nombre">
+                            <h3>EDUCANTIONAL GAME</h3>
+                        </div>
+                    </div>
+        
+                    
+                </div>
+                <div class="btn-left-cards "><img class="izq-rotacion" src="img/izquierda.svg"><i class='bx bx-chevron-left'></i></div>
+                <div class="btn-right-cards "><img class="der-rotacion" src="img/derecha.svg"><i class='bx bx-chevron-right'></i></div>
             </div>
-        </div>
+        </section>
+    </section>
     </section>
 
 
