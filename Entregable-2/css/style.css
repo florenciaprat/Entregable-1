@@ -62,6 +62,7 @@
     font-family: roboto;
     
 }
+
 body{
   width: 100%;
   background-color:var(--colorPrimario);
@@ -248,9 +249,7 @@ img.game-main{
   height: 1px; 
   background:var(--blanco);
 }
-img.logo{
-  margin-left: 30px;
-}
+
 
 
 /*--------FOOTER----------*/
@@ -302,6 +301,12 @@ footer .logo ul li {
 .sec-links {
   margin: 15px;
 }
+.sec-links li img{
+  margin-right: 3px;
+  width: 18px;
+  height: 18px;
+}
+
 .footer-logo{
   margin: 10px;
 }
@@ -321,11 +326,13 @@ footer .logo ul li {
   flex-direction: column;
   flex-wrap:wrap;
   align-items: baseline;
+  width: 300px;
 
   
 }
 .footer-info p, .footer-info input{
   margin: 5px;
+  
 }
 
 
@@ -348,7 +355,7 @@ footer .logo ul li {
   font-size: 24px;
   color: var(--blanco);
   text-decoration: underline;
-  margin-left: 20px;
+  margin-left: 90px;
   margin-top: 50px;
 
 }
@@ -362,7 +369,7 @@ footer .logo ul li {
 .container-todo-form{
   display: flex;
   justify-content: center;
-  width: 900px;
+  width: 1100px;
   height: 500px;
   padding-left: 15%;
   margin-bottom: 30px;
@@ -372,7 +379,7 @@ footer .logo ul li {
   height: 500px;
 }
 .form-container {
-  width: 320px;
+  width: 350px;
   background-color: var(--sombra-P2);
   padding: 2rem;
   color: rgba(243, 244, 246, 1);
@@ -492,7 +499,7 @@ footer .logo ul li {
 
 /*--------REGISTRARSE--------------*/
 .form-container-regis{
-  width: 320px;
+  width: 340px;
   background-color: var(--sombra-P2);
   padding: 2rem;
   color: var(--blanco);
@@ -602,7 +609,7 @@ footer .logo ul li {
 }
 .btn-registrarse{
   display: block;
-  width: 40%;
+  width: 52%;
   background-color: var(--colorAcento);
   padding: 10px;
   text-align: center;
@@ -875,6 +882,15 @@ footer .logo ul li {
   margin-right: 30px;
   height: 970px;
 }
+.similares .titulo-similares{
+  margin-left: 10px;
+  margin-bottom: 40px;
+  margin-top: 8px;
+  color: var(--blanco);
+  text-decoration: underline;
+}
+
+
 .card-chica{
   background-color: var(--sombra-S3);
   width: 280px;
@@ -1057,7 +1073,6 @@ footer .logo ul li {
   color: var(--sombra-S3);
   font-weight: bold;
 }
-
 
 /*------CARGA---------------*/
 .container-progress{
@@ -1252,16 +1267,16 @@ div .contenedor{
 .container-carrousel {
     position: relative;
     overflow: hidden;
-    width: 1030px;
+    width: 2000px;
     height: 250px;
-    margin-top: 3%;
+    margin-top: 1%;
     margin-bottom: 3%;
 }
 
 .carrousel {
     position: absolute;
     display: flex;
-    gap: 30px;
+    gap: 13px;
     transition: transform .3s ease-out;
 }
 .card-chica .card-nombre {
@@ -1501,6 +1516,7 @@ div .contenedor{
     flex-direction:row;
     flex-wrap: nowrap;
     padding: 5px;
+    justify-content: space-between;
   }
   div.div-logo{
     display: flex;
