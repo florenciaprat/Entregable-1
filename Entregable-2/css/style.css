@@ -73,6 +73,9 @@ body{
 .navbar-content{
   grid-area: header;
 }
+.carrusel_juegos{
+  grid-area: carruseles;
+}
 .background-main{
   grid-area: content;
 }
@@ -82,11 +85,11 @@ body{
   grid-template-areas:
     "header"
     "content"
-    "content"
-    "content"
-    "content"
-    "content"
-    "content" 
+    "carruseles"
+    "carruseles"
+    "carruseles"
+    "carruseles"
+    "carruseles" 
     "footer";
 }
 .logo{
@@ -365,21 +368,22 @@ footer .logo ul li {
 }
 
 /* CARRUSELES JUEGOS */
-.carrusel_juegos {
+.carrusel_juegos{
   display: flex;
   flex-direction: column;
   margin: 10px 0;
   align-items: flex-start;
 }
-.carrusel_juegos h2 {
+
+.carrusel_juegos h2{
   margin-left: 12px;
   font-size: 30px;
 }
-.carrusel_juegos > div {
+.carrusel_juegos > div{
   display: flex;
   align-items: center;
 }
-.carrusel_juegos > div svg {
+.carrusel_juegos > div svg{
   display: none;
 }
 
@@ -802,7 +806,12 @@ footer .logo ul li {
   margin: 30px;
   margin-top: 70px;
 }
-
+.links-jugadores{
+  color: var(--blanco);
+}
+.links-jugadores:hover{
+  color: var(--luz-P3);
+}
   .juego-linea{
     width: 897px;
     height: 536px;
@@ -998,7 +1007,7 @@ footer .logo ul li {
 }
 
 
-.card-chica{
+.card-chica, .card-chica-animacion{
   background-color: var(--sombra-S3);
   width: 280px;
   height: 240px;
@@ -1069,7 +1078,7 @@ footer .logo ul li {
   line-height: var(--line);
   color: var(--colorAcento);
 }
-.card-chica .img-card{
+.card-chica .img-card, .card-chica-animacion .img-card{
   width:280px ;
   height: 150px;
  border-top-right-radius: 10px;
@@ -1413,7 +1422,7 @@ div .contenedor{
     gap: 13px;
     transition: transform .3s ease-out;
 }
-.card-chica .card-nombre {
+.card-chica .card-nombre, .card-chica-animacion .card-nombre{
   width: 100%;
   height: 110px;
   background-color:transparent;
@@ -1427,11 +1436,11 @@ div .contenedor{
   align-items: center;
 }
 /*Efectos hover a las card cuando se muestra el nombre*/
-.card-chica:hover .card-nombre {
+.card-chica:hover .card-nombre, .card-chica-animacion:hover .card-nombre {
         display: flex;
 }
 
-.card-chica:hover .img-card {
+.card-chica:hover .img-card, .card-chica-animacion:hover .img-card{
         opacity: 20%;
 }
 .btn{
@@ -1706,7 +1715,8 @@ display: none;
   .carousel-item img {
     display: block;
     height: auto;
-    max-width: 110%;
+    max-width: 105%;
+    margin-left: 37px;
   }
 /*------SECTION CARRUSELES----*/
 div .contenedor{
@@ -1851,7 +1861,7 @@ div .contenedor{
 .btn-4{
   width: 174px ;
   height:48px;
-  margin-top: 30%;
+  margin-bottom: 30%;
 }
 /*-----------CARRUSSEL Y ANIMACION----------*/
 .cincocards1{
@@ -1973,7 +1983,7 @@ display: none;
 
 p.nuevos-semana{
   font-size: 32px;
-  margin-left:-700px;
+  margin-left:-650px;
   margin-top: 30px;
 }
 .logo{
@@ -1985,15 +1995,48 @@ p.nuevos-semana{
 
 
 /* carruseles juego */
-.carrusel_juegos h2 {
-  margin-left: 42px;
-  font-size: var(--h2-font-size);
+.carrusel_juegos h2{
+  margin-left: 52px;
+  font-family: var(--fuente);
+  font-size: 24px;
+  color: var(--blanco);
+  font-weight: var(--weight);
+  text-decoration: underline;
 }
-.carrusel_juegos > div svg {
+.carrusel_juegos > div svg{
   display: inline;
 }
-.carrusel_juegos > div .contenedor_juegos {
+.carrusel_juegos > div .contenedor_juegos{
   width: calc(100vw - 90px);
   overflow: hidden;
 }
+
+
+
+
+.card-chica-animacion {
+  flex: 0 0 auto;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.contenedor_juegos {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.card-chica-animacion {
+  flex: 0 0 auto;
+  transition: transform 0.3s ease-in-out;
+  transform: skew(0deg);
+}
+
+.card-chica-animacion.skew {
+  transform: skew(50deg);
+}
+
+
+
+
 }
