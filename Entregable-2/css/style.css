@@ -361,10 +361,37 @@ footer .logo ul li {
   font-size: 24px;
   color: var(--blanco);
   text-decoration: underline;
-  margin-left: 90px;
- 
-
+  margin-left: 30px
 }
+
+/* CARRUSELES JUEGOS */
+.carrusel_juegos {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  align-items: flex-start;
+}
+.carrusel_juegos h2 {
+  margin-left: 12px;
+  font-size: 30px;
+}
+.carrusel_juegos > div {
+  display: flex;
+  align-items: center;
+}
+.carrusel_juegos > div svg {
+  display: none;
+}
+
+.carrusel_juegos > div .contenedor_juegos {
+  display: flex;
+  overflow-x: scroll;
+  width: calc(100vw - 30px);
+  max-width: 1440px;
+  gap: 20px;
+  padding: 30px 10px;
+}
+
 
 
 /*------LOGIN----------------------*/
@@ -1573,7 +1600,7 @@ p.nuevos-semana{
 
 
 .cincocards1{
-  margin-left:70px;
+  margin-left:20px;
   margin-right: 70px;
   
 
@@ -1828,13 +1855,13 @@ div .contenedor{
 }
 /*-----------CARRUSSEL Y ANIMACION----------*/
 .cincocards1{
-  margin-left:70px;
+  margin-left:40px;
   margin-right: 70px;
   
 
 }
 .cincocards2{
-  margin-left:0px;
+  margin-left:-68px;
   
 
 }
@@ -1941,7 +1968,7 @@ display: none;
   transition: transform 1s ease;
 }
 .carousel-inner {
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 p.nuevos-semana{
@@ -1951,5 +1978,22 @@ p.nuevos-semana{
 }
 .logo{
   margin-left: 0px;
+}
+.titulos-home{
+  margin-left: 54px;
+}
+
+
+/* carruseles juego */
+.carrusel_juegos h2 {
+  margin-left: 42px;
+  font-size: var(--h2-font-size);
+}
+.carrusel_juegos > div svg {
+  display: inline;
+}
+.carrusel_juegos > div .contenedor_juegos {
+  width: calc(100vw - 90px);
+  overflow: hidden;
 }
 }

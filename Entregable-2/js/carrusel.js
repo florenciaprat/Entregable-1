@@ -1,76 +1,29 @@
-
 "use strict";
 
-let allBtnIzqs = document.querySelectorAll(".btn-left-cards");
-let allBtnDer = document.querySelectorAll(".btn-right-cards");
+let array_carruseles = document.querySelectorAll(".carrusel_juegos > div");
 
-
-allBtnIzqs.forEach(boton => {
-    boton.classList.add('hidden');
-});
-
-
-
-
-allBtnDer.forEach(boton => {
-    boton.addEventListener("click", function() {
-        let primerCincoCards =  boton.parentElement.firstElementChild;
-        let segundoCincoCards =  boton.parentElement.firstElementChild.nextElementSibling;
+function moverCarrusel(accion,c_juegos){
+    let movimientoTotal = c_juegos.clientWidth * accion;
+    c_juegos.querySelectorAll(".card_juego").forEach( e =>{
+        if(accion == -1){
+            e.classList.add("enMovimientoI")
+        setTimeout(()=>{
+            e.classList.remove("enMovimientoI")
+        },200)
+        }else{
+            e.classList.add("enMovimientoD")
+        setTimeout(()=>{
+            e.classList.remove("enMovimientoD")
+        },200)
+        }
+    })
+    c_juegos.scrollBy({left:movimientoTotal,behavior:"smooth"});
     
-
-      
-          // Agrega las clases para la transformación al segundo elemento
-          primerCincoCards.classList.remove('transformacion-reset');
-          primerCincoCards.classList.remove('transformacion-izquierda');
-          segundoCincoCards.classList.remove('transformacion-izquierda');
-            primerCincoCards.classList.add('transformacion-derecha');
-            segundoCincoCards.classList.add('transformacion-derecha');
-            
-            //Quita la clase de transformación y agrega la clase de reset después de 1 segundo al segundo elemento
-            setTimeout(function() {
-
-            segundoCincoCards.classList.remove('transformacion-izquierda');
-            segundoCincoCards.classList.remove('transformacion-derecha');
-            segundoCincoCards.classList.remove('transformacion-reset');
-            segundoCincoCards.classList.add('transformacion-reset-dos');
-            
-            boton.previousElementSibling.classList.remove('hidden');
-            boton.classList.add('hidden');
-            }, 500);
+}
 
 
-    });
-
-
-});
-
-
-allBtnIzqs.forEach(boton => {
-    boton.addEventListener("click", function() {
-        let primerCincoCards =  boton.parentElement.firstElementChild;
-        let segundoCincoCards =  boton.parentElement.firstElementChild.nextElementSibling;
-    
-
-       //Agrega las clases para la transformación al segundo elemento
-       primerCincoCards.classList.remove('transformacion-derecha');
-    segundoCincoCards.classList.remove('transformacion-derecha');
-    segundoCincoCards.classList.remove('transformacion-reset-dos');
-    primerCincoCards.classList.add('transformacion-izquierda'); 
-    segundoCincoCards.classList.add('transformacion-izquierda');
-  
-    setTimeout(function() {
-       // Quita la clase de transformación y agrega la clase de reset después de 1 segundo al segundo elemento
-       segundoCincoCards.classList.remove('transformacion-izquierda');
-      segundoCincoCards.classList.remove('transformacion-derecha');
-      primerCincoCards.classList.add('transformacion-reset');
-      
-      boton.nextElementSibling.classList.remove('hidden');
-     boton.classList.add('hidden');
-    }, 500);
-
-
-
-    });
-
-
+array_carruseles.forEach(contenedor_carrusel => {
+    let contenedor_juegos = contenedor_carrusel.childNodes[3];
+    let fDer= contenedor_carrusel.childNodes[5].addEventListener('click',()=>{moverCarrusel(1,contenedor_juegos)})
+    let fIzq = contenedor_carrusel.childNodes[1].addEventListener('click',()=>{moverCarrusel(-1,contenedor_juegos)})
 });
