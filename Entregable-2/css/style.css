@@ -984,7 +984,8 @@ footer .logo ul li {
 .similares{
   background-color: var(--luz-S1);
   margin-top: 30px;
-  margin-right: 30px;
+  width: 296px;
+  margin-right: 5px;
   height: 970px;
   border-radius: 5px;
 }
@@ -1715,8 +1716,8 @@ display: none;
   .carousel-item img {
     display: block;
     height: auto;
-    max-width: 105%;
-    margin-left: 37px;
+    max-width: 115%;
+   
   }
 /*------SECTION CARRUSELES----*/
 div .contenedor{
@@ -1956,34 +1957,11 @@ display: none;
  width: 100%;
 }
 
-/* clases animaciones botones izq der carrusel cards */
 
-.transformacion-izquierda {
-  transform: translateX(0%) skew(-15deg);
-  transition: transform 1s ease;
-}
-
-.transformacion-derecha {
-  transform: translateX(-120%) skew(15deg);
-  transition: transform 1s ease;
-}
-
-.transformacion-reset {
-  transform: translateX(0%) skewX(0deg);
-  transition: transform 1s ease;
-}
-
-.transformacion-reset-dos {
-  transform: translateX(-100%) skewX(0deg);
-  transition: transform 1s ease;
-}
-.carousel-inner {
-  margin-left: 10px;
-}
 
 p.nuevos-semana{
   font-size: 32px;
-  margin-left:-650px;
+  margin-left:-500px;
   margin-top: 30px;
 }
 .logo{
@@ -1992,7 +1970,9 @@ p.nuevos-semana{
 .titulos-home{
   margin-left: 54px;
 }
-
+#flecha_derecha{
+  color: #1BC700;
+}
 
 /* carruseles juego */
 .carrusel_juegos h2{
@@ -2039,4 +2019,17 @@ p.nuevos-semana{
 
 
 
+}
+@media only screen and (min-width: 1300px){
+p.nuevos-semana{
+  font-size: 32px;
+  margin-left:-750px;
+  margin-top: 30px;
+}
+.carousel-inner {
+ margin-left: 35px;
+}
+.similares{
+  margin-right: 30px;
+}
 }
