@@ -67,9 +67,19 @@
         <img src="img/flecha.svg" alt="flecha" class="links-juego">
         <p class="links-juego">4 EN LÍNEA</p>
      </div>
-        <div class="contenedor-juego">
-            <img src="img/juegoEnLinea.png" alt="4 en línea" class="juego-linea">
+     <div id="canvasContainer">
+        <canvas id="canvas" style="background-image: url('img/canvaFondo.png'); "></canvas>
+        <button id="botonJugarCanvas">JUGAR</button>
+    </div>
+        
+        <div id="opciones" class="oculto">
+            <p>SELECCIONE UN MODO DE JUEGO</p>
+            <button id="cuatroEnLinea">4 EN LÍNEA</button>
+            <button id="cincoEnLinea">5 EN LÍNEA</button>
+            <button id="seisEnLinea">6 EN LÍNEA</button>
         </div>
+    
+       
         <div class="info-juego">
             <div class="titulo-info">
                 <img src="img/iconoinfo.png" alt="icono-info">
@@ -236,4 +246,5 @@
 </footer>
 </body>
 <script src="js/home.js"></script>
+<script src="js/cuadro.js"></script>
 </html>

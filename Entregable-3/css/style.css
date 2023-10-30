@@ -812,12 +812,7 @@ footer .logo ul li {
 .links-jugadores:hover{
   color: var(--luz-P3);
 }
-  .juego-linea{
-    width: 897px;
-    height: 536px;
-    margin: 30px;
-
-  }
+  
   .titulo-info{
     display: flex;
     flex-direction: row;
@@ -852,9 +847,8 @@ footer .logo ul li {
   .navbar-content{
     grid-area: header;
   }
-  .contenedor-juego{
-    grid-area: juego;
-  }
+ 
+  
   .info-juego{
     grid-area: info;
   }
@@ -2032,4 +2026,79 @@ p.nuevos-semana{
 .similares{
   margin-right: 30px;
 }
+/*---------------------ENTREGABLE 3 */
+#canvas{
+  width: 897px;
+  height: 536px;
+  margin: 30px;
+}
+
+canvas{
+  position: relative;
+}
+
+.oculto {
+  display: none;
+}
+/* estilos.css */
+#canvasContainer {
+  grid-area: juego;
+  position: relative;
+  text-align: center;
+}
+
+
+
+#botonJugarCanvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:  var(--colorAcento);
+  color: var(--blanco);
+  font-size: 25px;
+  font-weight: var(--weight);
+  letter-spacing: var(--botonesEspaciado);
+  width: 150px;
+  height: 60px;
+  border-radius: 15px;
+  border-color: var(--colorAcento);
+}
+
+#opciones{
+  background-color: var(--colorAcento);
+  border-radius: 10px;
+  position: absolute;
+  margin-left: 80px;
+  margin-top: 400px;
+  width: 800px;
+  height: 200px; 
+  align-items: center;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+#opciones p{
+  margin-left: 20px;
+  font-family: var(--fuente);
+  font-size: 20px;
+  color: var(--blanco);
+}
+#cuatroEnLinea,#cincoEnLinea,#seisEnLinea{
+  margin: 20px;
+  width: 200px;
+  height: 40px;
+  background-color: var(--sombra-P1);
+  border-radius: 5px;
+  color: var(--blanco);
+  font-size: 12px;
+  border: none;
+  letter-spacing: var(--botonesEspaciado);
+  
+}
+#cuatroEnLinea:hover,#cincoEnLinea:hover,#seisEnLinea:hover{
+  background-color: var(--sombra-P3);
+}
+
+
+
 }
