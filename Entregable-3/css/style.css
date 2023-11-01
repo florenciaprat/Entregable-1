@@ -2026,7 +2026,7 @@ p.nuevos-semana{
 .similares{
   margin-right: 30px;
 }
-/*---------------------ENTREGABLE 3 */
+/*---------------------ENTREGABLE 3---------------------------------------------------------- */
 #canvas{
   width: 897px;
   height: 536px;
@@ -2037,8 +2037,22 @@ canvas{
   position: relative;
 }
 
-.oculto {
+.oculto,.oculto2 {
   display: none;
+}
+
+#eleccionFichas{ 
+  background-color: var(--colorAcento);
+  border-radius: 10px;
+  position: absolute;
+  margin-left: 80px;
+  margin-top: 300px;
+  width: 800px;
+  height: 350px; 
+  align-items: center;
+  padding-left: 40px;
+  padding-top: 40px;
+  
 }
 /* estilos.css */
 #canvasContainer {
@@ -2046,6 +2060,24 @@ canvas{
   position: relative;
   text-align: center;
 }
+
+
+.jugador1, .jugador2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 20px;
+  margin-left: 150px;
+}
+
+.img-mark{
+  width: 100px;
+  height: 100px;
+  margin-left:20px ;
+  margin-top: 20px;
+}
+
+
 
 
 
