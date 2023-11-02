@@ -3,7 +3,7 @@ let ctx = canvas.getContext('2d');
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 
-const CANT_FIG=30;
+const CANT_FIG=6;
 
 let figures = [];
 let lastClickedFigure = null;
@@ -16,16 +16,29 @@ function addFigure(){
 function drawFigure(){
     clearCanavas();
     for(let i=0; i<figures.length;i++){
-        figures[i].draw();
+        figures[i].draw(elon1);
     }
 
 }
+const elon1 = new Image();
+elon1.src = 'img/elonpc.png';
+
+const elon2 = new Image();
+elon2.src = 'img/funny elon.png';
+
+const mark1 = new Image();
+mark1.src = 'img/markPC.png';
+
+const mark2 = new Image();
+mark2.src = 'img/mark fuck u.png';
+
+
+
 function addCircle(){
     let posX= Math.round(Math.random()*canvasWidth);
     let posY= Math.round(Math.random()*canvasHeight);
-    let color= 'blue';
-
-    let circulo = new circle(posX,posY,20,color,ctx);
+    let color = 'blue';
+    let circulo = new circle(posX,posY,50,color,ctx);
     figures.push(circulo);
 }
 function onMouseDown(e){

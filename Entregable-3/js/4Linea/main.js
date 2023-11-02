@@ -9,6 +9,7 @@ const cuatroEnLinea = document.getElementById('cuatroEnLinea');
 const cincoEnLinea = document.getElementById('cincoEnLinea');
 const seisEnLinea = document.getElementById('seisEnLinea');
 
+
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 
@@ -17,12 +18,26 @@ let figures = [];
 let lastClickedFigure = null;
 let isMouseDown = false;
 
+const elon1 = new Image();
+elon1.src = 'img/elonpc.png';
+
+const elon2 = new Image();
+elon2.src = 'img/funny elon.png';
+
+const mark1 = new Image();
+mark1.src = 'img/markPC.png';
+
+const mark2 = new Image();
+mark2.src = 'img/mark fuck u.png';
+
 const img = new Image();
 img.src = "img/pelea.jpg";
 
 botonJugar.addEventListener('click', () => {
     opciones.style.display = 'block';
 });
+
+
 
 function iniciarJuego(lineas) {
     alert(`Has seleccionado ${lineas} en línea. El juego comienza.`);
@@ -31,7 +46,7 @@ function iniciarJuego(lineas) {
 
 cuatroEnLinea.addEventListener('click', () => {
     clearCanvas();
-    jugadores.style.display = 'block';
+    addFigures();       
     
 });
 
@@ -55,29 +70,28 @@ seisEnLinea.addEventListener('click', () => {
 function nuevoCanvas(){
     context.fillStyle = '#220335';
     context.fillRect(0,0,canvasWidth,canvasHeight);
-   // context.drawImage(img, 0, 0, canvas.width, canvas.height);
 }
    
 
 
     function addFigure(){
-            addCircle();
+            addFicha();
             drawFigure();
         
     }
     function drawFigure(){
         nuevoCanvas();
         for(let i=0; i<figures.length;i++){
-            figures[i].draw();
+            figures[i].draw(elon1);
         }
     
     }
    
-    function addCircle(){
-        let posX= 20;
-        let posY= 30;
+    function addFicha(){
+        let posX= Math.round(Math.random()*canvasWidth);
+        let posY= Math.round(Math.random()*canvasHeight);
         let color= 'blue';
-        let circulo = new circle(posX,posY,15,color,context);
+        let circulo = new ficha(posX,posY,60,color,context);
         figures.push(circulo);
     }
     function onMouseDown(e){
@@ -102,10 +116,7 @@ function nuevoCanvas(){
             drawFigure();
         }
     }
-    function clearCanavas(){
-        context.fillStyle = 'white';
-        context.fillRect(0,0,canvasWidth,canvasHeight);
-    }
+    
     
     function addFigures(){
         addFigure();
