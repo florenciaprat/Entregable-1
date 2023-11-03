@@ -799,6 +799,10 @@ footer .logo ul li {
 .links-a-inicio a:hover{
   color: var(--colorAcento);
 }
+a.links-juego{
+  margin-top: 20px;
+  margin-right: 10px;
+}
 
 .links-a-inicio{
   display: flex;
@@ -2026,95 +2030,194 @@ p.nuevos-semana{
 .similares{
   margin-right: 30px;
 }
+}
 /*---------------------ENTREGABLE 3---------------------------------------------------------- */
-#canvas{
   
-  margin: 30px;
-}
-
-canvas{
+.canvas{
+  grid-area: juego;
+  display: none;  
   position: relative;
+  background-color:var(--blanco);
+  width: 897px;
+  height: 536px;
+  margin-left: 30px;
 }
-
-.oculto,.oculto2 {
-  display: none;
+.canvas-form h2 {
+  font-size: var(--tamaño);
+  color: var(--blanco);
+  font-family: var(--fuente);
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-
-#eleccionFichas{ 
+.canvas-form h3 {
+  font-size: 20px;
+  color: var(--blanco);
+  font-family: var(--fuente);
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.menusGame{
+  right: 10px;
+  top: 30px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  height: 60px;
+  margin-right: 10px;
+}
+.menusGame #restartGame{
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  width: 100px;
+  height: 50px;
+  color: var(--blanco);
+  background-color: var(--cancelar);
+  border-color: var(--cancelar);
+  font-family: var(--fuente);
+  letter-spacing: var(--botonesEspaciado);
+  cursor:pointer;
+  border: none;
+  justify-content: center;
+  padding: 10px;
+}
+p#tiempo{
   background-color: var(--colorAcento);
   border-radius: 10px;
+  padding: 8px;
+  margin-left: 670px; 
+  margin-top: 33px;
+}
+#tiempo{
   position: absolute;
-  margin-left: 80px;
-  margin-top: 300px;
-  width: 800px;
-  height: 350px; 
-  align-items: center;
-  padding-left: 40px;
-  padding-top: 40px;
-  
-}
-/* estilos.css */
-#canvasContainer {
-  grid-area: juego;
-  position: relative;
-  text-align: center;
-}
-
-
-.jugador1, .jugador2{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin: 20px;
-  margin-left: 150px;
-}
-
-.img-mark{
-  width: 100px;
-  height: 100px;
-  margin-left:20px ;
-  margin-top: 20px;
-}
-
-
-
-
-
-#botonJugarCanvas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color:  var(--colorAcento);
   color: var(--blanco);
   font-size: 25px;
+
+}
+.canvas-form{
+  grid-area: juego;
+  height: 536px;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 40px;
+  background-image: url("../img/markvselon3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+  .player{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 2px;
+}
+.inputCanvas{
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+  padding-left: 10px;
+  color: #0B0C12;
+  cursor: text;
+}
+
+.botonJugarCanvas{
+  position: absolute;
+  margin-top: 30px;
+  transform: translate(-50%, -50%);
+  background-color:var(--colorAcento);
+  color: var(--blanco);
+  font-size: 20px;
   font-weight: var(--weight);
   letter-spacing: var(--botonesEspaciado);
   width: 150px;
-  height: 60px;
+  height: 40px;
   border-radius: 15px;
   border-color: var(--colorAcento);
+ 
+}
+.botonJugarCanvas:hover{
+  background-color:var(--aceptar);
+  border-color:var(--aceptar);
+}
+.token{
+  cursor: pointer;
+  
+}
+.token:hover{
+  scale: 1.3;
+  transition: 0.5s;
+
+
+}
+.titles-canvas{
+  display: flex;
+  position: absolute;
+  margin-left: 9%;
+  width: 80%;
+  bottom: 10%;
+  justify-content: space-between;
+}
+.namePlayer1,.namePlayer2{
+  color: #0B0C12;  
+}
+#turno{
+  position: absolute;
+  bottom: 7%;
+  width: 100%;
+  text-align: center;
+}
+#ganador{
+  display:none;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 7%;
+  width: 100%;
+  margin-bottom: -20px;
+  text-align: center;
+  color:var(--aceptar);
+}
+
+.namePlayer1,.namePlayer2{
+  color: var(--colorAcento);
+}
+.namePlayer1{
+  margin-right: 20px;
+}
+.namePlayer2{
+  margin-right: -20px;
 }
 
 #opciones{
   background-color: var(--colorAcento);
   border-radius: 10px;
-  position: absolute;
-  margin-left: 80px;
-  margin-top: 400px;
-  width: 800px;
-  height: 200px; 
+  margin-left: 145px;
+  width: 600px;
+  height: 100px; 
   align-items: center;
-  padding-left: 40px;
-  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+
 }
-#opciones p{
+div p{
   margin-left: 20px;
   font-family: var(--fuente);
   font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: var(--blanco);
 }
-#cuatroEnLinea,#cincoEnLinea,#seisEnLinea{
+#linea4,#linea5,#linea6{
   margin: 20px;
   width: 200px;
   height: 40px;
@@ -2126,10 +2229,11 @@ canvas{
   letter-spacing: var(--botonesEspaciado);
   
 }
-#cuatroEnLinea:hover,#cincoEnLinea:hover,#seisEnLinea:hover{
+#linea4:hover,#linea5:hover,#linea6:hover{
   background-color: var(--sombra-P3);
 }
-
-
-
+#linea4:focus,#linea5:focus,#linea6:focus{
+  background-color: #296CD1;
 }
+
+

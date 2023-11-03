@@ -67,19 +67,64 @@
         <img src="img/flecha.svg" alt="flecha" class="links-juego">
         <p class="links-juego">4 EN LÍNEA</p>
      </div>
-     <div id="canvasContainer">
-        <canvas id="canvas" width="897" height= "536" style="background-image: url('img/canvaFondo.png'); "></canvas>
-        <button id="botonJugarCanvas">JUGAR</button>
-    </div>
-        
-        <div id="opciones" class="oculto">
-            <p>SELECCIONE UN MODO DE JUEGO</p>
-            <button id="cuatroEnLinea">4 EN LÍNEA</button>
-            <button id="cincoEnLinea">5 EN LÍNEA</button>
-            <button id="seisEnLinea">6 EN LÍNEA</button>
-        </div>
-       
     
+<!--------------------------------------------------------------------------------------------------->
+        <div class="canvas-form">
+            <div>
+                <h2>ELIJAN SUS FICHAS</h2>
+            </div>
+            <div class="player">
+                <div class="token" id="ficha1">
+                    <img src="img/1elon.png" alt="ficha1" width="80px">
+                </div>
+                <div class="token" id="ficha2">
+                    <img src="img/elonpc.png" alt="ficha2" width="80px">
+                </div>
+                <div class="token" id="ficha3">
+                    <img src="img/funnyelon.png" alt="ficha3" width="80px">
+                </div>
+            </div>
+            <div>
+                <h3>VS.</h3>
+            </div>
+            <div class="player">
+                <div class="token" id="ficha4">
+                    <img src="img/1mark.png" alt="ficha4" width="80px">
+                </div>
+                <div class="token" id="ficha5">
+                    <img src="img/markfucku.png"alt="ficha5" width="80px">
+                </div>
+                <div class="token" id="ficha6">
+                    <img src="img/markPC.png" alt="ficha6" width="80px">
+                </div>
+            </div>
+            <div>
+                <p>SELECCIONE UN MODO DE JUEGO</p>
+            </div>
+            <div id="opciones">
+                <button id="linea4">4 EN LÍNEA</button>
+                <button id="linea5">5 EN LÍNEA</button>
+                <button id="linea6">6 EN LÍNEA</button>
+            </div>
+            <button class="button-play botonJugarCanvas" id="play-game">JUGAR</button>
+        </div>
+    <div class="canvas">
+        <div class="titles-canvas">
+            <h1 class="namePlayer1" id="titulo1"></h1>
+            <h1 class="namePlayer2" id="titulo2"></h1>
+        </div>
+        <h1 id="turno"></h1>
+        <h1 id="ganador"></h1>
+        <canvas id="canvas" width="897" height= "536"></canvas>
+
+        <p id="tiempo"></p>
+        <div class="menusGame">
+            <button id="restartGame">REINICIAR</button>
+        </div>
+    </div>
+
+
+
        
         <div class="info-juego">
             <div class="titulo-info">
@@ -247,9 +292,9 @@
 </footer>
 </body>
 <script src="js/home.js"></script>
-<script src="js/4Linea/figure.js"></script>
-<script src="js/4Linea/ficha.js"></script>
-<script src="js/4Linea/cuadro.js"></script>
-<script src="js/4Linea/main.js"></script>
+<script src="js/4Linea/Ficha.js"></script>
+<script src="js/4Linea/EspacioTablero.js"></script>
+<script src="js/4Linea/Jugador.js"></script>
+<script src="js/4Linea/Juego.js"></script>
 
 </html>
