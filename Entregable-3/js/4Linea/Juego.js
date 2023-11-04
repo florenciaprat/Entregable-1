@@ -1,14 +1,13 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
-//arreglodeespaciosCHATO
 let arreglosDeEspacios = []
 //arreglo de columnas
 let matriz = []
-//arreglos de fichas
+//arreglos de fichas de los jugadores
 let fichasJugador1 = [];
 let fichasJugador2 = [];
-//arreglo de CaidaZonaficha
+//arreglo de Zona de caida de ficha
 let CaidaZonaficha = []
 
 let cantEnLinea = 4;
@@ -83,10 +82,10 @@ function cargarTablero(){
 
     
     //cargar fichas de jugadores en el tablero
-    //la Y progresiva es para que las fichas se pongan una abajo de la otra con difencia de 15 
+    //la Y regresiva es para que las fichas se pongan una abajo de la otra con difencia de 15 
     //(por esto:posYregresiva=posYregresiva+15) y la x es fija para cada jugador.
 
-    let posYregresiva = 100;
+    let posYregresiva = 110;
     for(let i = 0; i < cantidadFichas/2; i++){
         //se cargan fichas jugador 1
         let posx = 50;
@@ -94,11 +93,11 @@ function cargarTablero(){
         let fichaJugador1 = new Ficha(posx, posy, TAMANIOFICHA, ctx, jugador1);
         fichasJugador1.push(fichaJugador1);
         //se cargan fichas jugador 2
-        posx = 850;
+        posx = 853;
         posy = posYregresiva;
         let fichaJugador2 = new Ficha(posx, posy, TAMANIOFICHA, ctx, jugador2);
         fichasJugador2.push(fichaJugador2);
-        posYregresiva=posYregresiva+15;
+        posYregresiva=posYregresiva+11;
     }
     posYregresiva = canvasHeight - alturaTablero/2;
 
@@ -223,15 +222,15 @@ document.querySelector("#play-game").addEventListener('click',()=>{
 })
 //Fichas
 function seleccionarFichaJugador2(ficha){
-    ficha2.style.scale = "1.0"
     ficha4.style.scale = "1.0"
+    ficha5.style.scale = "1.0"
     ficha6.style.scale = "1.0"
     ficha.style.scale = "1.2"
 }
 function seleccionarFichaJugador1(ficha){
     ficha1.style.scale = "1.0"
+    ficha2.style.scale = "1.0"
     ficha3.style.scale = "1.0"
-    ficha5.style.scale = "1.0"
     ficha.style.scale = "1.2"
 }
 ficha1 = document.querySelector("#ficha1");
@@ -240,6 +239,7 @@ ficha3 = document.querySelector("#ficha3");
 ficha4 = document.querySelector("#ficha4");
 ficha5 = document.querySelector("#ficha5");
 ficha6 = document.querySelector("#ficha6");
+
 ficha1.addEventListener('click',()=>{
     for(let i = 0; i < fichasJugador1.length;i++){
         fichasJugador1[i].setImagen(imgFicha1)
@@ -248,11 +248,11 @@ ficha1.addEventListener('click',()=>{
     seleccionarFichaJugador1(ficha1);
 })
 ficha2.addEventListener('click',()=>{
-    for(let i = 0; i < fichasJugador2.length;i++){
-        fichasJugador2[i].setImagen(imgFicha2)
-        imgFichaJugador2 = imgFicha2;
+    for(let i = 0; i < fichasJugador1.length;i++){
+        fichasJugador1[i].setImagen(imgFicha2)
+        imgFichaJugador1 = imgFicha2;
     }
-    seleccionarFichaJugador2(ficha2);
+    seleccionarFichaJugador1(ficha2);
 })
 ficha3.addEventListener('click',()=>{
     for(let i = 0; i < fichasJugador1.length;i++){
@@ -269,11 +269,11 @@ ficha4.addEventListener('click',()=>{
     seleccionarFichaJugador2(ficha4);
 })
 ficha5.addEventListener('click',()=>{
-    for(let i = 0; i < fichasJugador1.length;i++){
-        fichasJugador1[i].setImagen(imgFicha5)
-        imgFichaJugador1 = imgFicha5;
+    for(let i = 0; i < fichasJugador2.length;i++){
+        fichasJugador2[i].setImagen(imgFicha5)
+        imgFichaJugador2 = imgFicha5;
     }
-    seleccionarFichaJugador1(ficha5);
+    seleccionarFichaJugador2(ficha5);
 })
 ficha6.addEventListener('click',()=>{
     for(let i = 0; i < fichasJugador2.length;i++){
@@ -405,14 +405,14 @@ function insertarFicha(columna){
             fichaActual.ponerEnTablero(false);
             mover(x,y);
             drawFigures();
-            console.log("flor");
+            console.log("flor");//aca iria el chequear ganador
             
             break;
         }
         else if(i == 0){
             fichaActual.posInicial();
             drawFigures();
-            console.log("flor");
+            console.log("flor");//aca iria el chequear ganador
             
             cambiarTurno()
 
