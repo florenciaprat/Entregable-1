@@ -10,6 +10,8 @@ class Ficha{
         this.imagen= new Image();
         this.xInicial;
         this.yInicial;
+        this.color= 'yellow';
+        this.borde= 10;
     }
     
     drawImg(img){
@@ -26,6 +28,10 @@ class Ficha{
             this.ctx.drawImage(this.imagen, this.x - this.radio,this.y - this.radio,this.radio/.6,this.radio/.6);
         }
     }
+
+  
+
+
     getpuedeMoverse(){
         return this.puedeMoverse;
     }
@@ -59,8 +65,7 @@ class Ficha{
         this.puedeMoverse = boolean;
     }
     posInicial(){
-        this.move(this.xInicial,this.yInicial)
-        console.log("movida")
+        this.move(this.xInicial,this.yInicial);
     }
     getJugador(){
         return this.jugador.getId();

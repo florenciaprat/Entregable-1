@@ -1,6 +1,7 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
-
+let colorGanador = 'rgb(229, 226, 49)';
+let bordeGanador = 10;
 let arreglosDeEspacios = []
 //arreglo de columnas
 let matriz = []
@@ -85,7 +86,7 @@ function cargarTablero(){
     //la Y regresiva es para que las fichas se pongan una abajo de la otra con difencia de 15 
     //(por esto:posYregresiva=posYregresiva+15) y la x es fija para cada jugador.
 
-    let posYregresiva = 110;
+    let posYregresiva = 500;
     for(let i = 0; i < cantidadFichas/2; i++){
         //se cargan fichas jugador 1
         let posx = 50;
@@ -97,9 +98,9 @@ function cargarTablero(){
         posy = posYregresiva;
         let fichaJugador2 = new Ficha(posx, posy, TAMANIOFICHA, ctx, jugador2);
         fichasJugador2.push(fichaJugador2);
-        posYregresiva=posYregresiva+11;
+        posYregresiva=posYregresiva-9;
     }
-    posYregresiva = canvasHeight - alturaTablero/2;
+  
 
 }
 function addEspacio(locationX,locationY){
@@ -308,6 +309,14 @@ document.querySelector('#linea6').addEventListener('click',()=>{//6 en linea
     TAMANIOFICHA = 22;
     reiniciarJuego();
 })
+document.querySelector('#linea7').addEventListener('click',()=>{//7 en linea
+    cantEnLinea = 7;
+    numColumn = 10;
+    numFilas = 9;
+    TAMESPACIO = 40;
+    TAMANIOFICHA = 20;
+    reiniciarJuego();
+})
 
 cargarTablero();
 drawFigures();
@@ -405,20 +414,106 @@ function insertarFicha(columna){
             fichaActual.ponerEnTablero(false);
             mover(x,y);
             drawFigures();
-            console.log("flor");//aca iria el chequear ganador
+            ControlarGanador(fila,columna);
+
             
             break;
         }
         else if(i == 0){
             fichaActual.posInicial();
             drawFigures();
-            console.log("flor");//aca iria el chequear ganador
-            
+            ControlarGanador(fila,columna);
             cambiarTurno()
 
         }
     }
 }
+
+
+function ControlarGanador(fila,columna) {
+    
+    let jugadorActual = fila[columna].getFicha().getJugador();
+    let contador = 1; // Contador inicia en 1 por la ficha actual
+
+
+    // Verificar hacia la izquierda
+    for (let j = columna - 1; j >= 0; j--) {
+        if (fila[j].getFicha() && fila[j].getFicha().getJugador() === jugadorActual) {
+            contador++;
+        } else {
+            break; // Dejar de contar si no hay una ficha del mismo jugador
+        }
+    }
+
+    // Verificar hacia la derecha
+    for (let j = columna + 1; j < numColumn; j++) {
+        if (fila[j].getFicha() && fila[j].getFicha().getJugador() === jugadorActual) {
+            contador++;
+        } else {
+            break; // Dejar de contar si no hay una ficha del mismo jugador
+        }
+    }
+
+    if (contador >= cantEnLinea) {
+        finalizarJuego();
+        return;
+    }
+
+   /* VERIFICAR VERTICALES- NO ANDA
+        for (let i = 0; i < numFilas; i++) {
+            if (columna.getFicha() && columna.getFicha().getJugador() === jugadorActual) {
+                contador++;
+            } else {
+                break; // Dejar de contar si no hay una ficha del mismo jugador
+            }
+        }
+       
+    if (contador >= cantEnLinea) {
+        console.log("Se ganó en una columna vertical.");
+        // Aquí puedes finalizar el juego o tomar otras medidas.
+    }
+*/
+    // Verificar diagonales descendentes
+    for (let i = 0; i <= numFilas - cantEnLinea; i++) {
+        for (let j = 0; j <= numColumn - cantEnLinea; j++) {
+            let contador = 0;
+            for (let k = 0; k < cantEnLinea; k++) {
+                if (matriz[i + k][j + k].getFicha() && matriz[i + k][j + k].getFicha().getJugador() === jugadorActual) {
+                    contador++;
+                }
+            }
+            if (contador === cantEnLinea) {
+                finalizarJuego();
+                return;
+            }
+        }
+    }
+
+    // Verificar diagonales ascendentes
+    for (let i = cantEnLinea - 1; i < numFilas; i++) {
+        for (let j = 0; j <= numColumn - cantEnLinea; j++) {
+            let contador = 0;
+            for (let k = 0; k < cantEnLinea; k++) {
+                if (matriz[i - k][j + k].getFicha() && matriz[i - k][j + k].getFicha().getJugador() === jugadorActual) {
+                    contador++;
+                }
+            }
+            if (contador === cantEnLinea) {
+                finalizarJuego();
+                return;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
 function mover(x,y){
 let pos=0;
 let fichaAnimada = new Ficha();
@@ -435,5 +530,5 @@ let fichaAnimada = new Ficha();
 
 
 }
-//Falta logica para chequear ganador 
+
  

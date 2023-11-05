@@ -2075,7 +2075,7 @@ p.nuevos-semana{
   align-items: center;
   border-radius: 15px;
   width: 100px;
-  height: 50px;
+  height: 35px;
   color: var(--blanco);
   background-color: var(--cancelar);
   border-color: var(--cancelar);
@@ -2084,19 +2084,20 @@ p.nuevos-semana{
   cursor:pointer;
   border: none;
   justify-content: center;
-  padding: 10px;
+  padding: 15px;
 }
 p#tiempo{
-  background-color: var(--colorAcento);
+ 
   border-radius: 10px;
   padding: 8px;
-  margin-left: 670px; 
-  margin-top: 33px;
+  margin-left: 410px; 
+  margin-top: 0px;
+  
 }
 #tiempo{
   position: absolute;
-  color: var(--blanco);
-  font-size: 25px;
+  color: var(--colorAcento);
+  font-size: 30px;
 
 }
 .canvas-form{
@@ -2216,7 +2217,7 @@ div p{
   margin-bottom: 20px;
   color: var(--blanco);
 }
-#linea4,#linea5,#linea6{
+#linea4,#linea5,#linea6, #linea7{
   margin: 20px;
   width: 200px;
   height: 40px;
@@ -2228,10 +2229,10 @@ div p{
   letter-spacing: var(--botonesEspaciado);
   
 }
-#linea4:hover,#linea5:hover,#linea6:hover{
+#linea4:hover,#linea5:hover,#linea6:hover,#linea7:hover{
   background-color: var(--sombra-P3);
 }
-#linea4:focus,#linea5:focus,#linea6:focus{
+#linea4:focus,#linea5:focus,#linea6:focus, #linea7:focus{
   background-color: #296CD1;
 }
 
