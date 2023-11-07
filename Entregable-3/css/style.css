@@ -619,7 +619,7 @@ footer .logo ul li {
 .input-group-regis label, .input-group-sup-1 label, .input-group-sup label {
   display: block;
   color: var(--blanco);
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 .input-group-regis input,.form-primerosinput .input-group-sup-1 input,.form-primerosinput .input-group-sup input{
   width: 100%;
@@ -730,7 +730,7 @@ footer .logo ul li {
   color: rgba(156, 163, 175, 1);
   display: flex;
   justify-content: center;
-  margin-top: 6px;
+  margin-top: 0px;
 }
 .signup-iniciar{
   color: var(--blanco);
@@ -739,10 +739,10 @@ footer .logo ul li {
 .fin-form-regis{
   display: flex;
   flex-direction: column;
-  margin-top: 4px;
+  margin-top: 0px;
 }
 .fin-form-regis .btn-registrarse{
-  margin-top: 5px;
+  margin-top: 0px;
 }
 .obligatorio{
   color: var(--cancelar);
