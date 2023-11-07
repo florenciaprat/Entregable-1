@@ -210,7 +210,7 @@ img.game-main{
 
 .container-img ul li{
   list-style: none;
-  margin-bottom: 15px;
+  margin-bottom: -5px;
   display: flex;
   align-items: center;
   color:var(--blanco);
@@ -235,6 +235,7 @@ img.game-main{
   color: var(--blanco);
   width: 30px;
   height: 25px;
+  margin-bottom: 20px;
 }
 
 .user-img {
@@ -795,14 +796,12 @@ footer .logo ul li {
   font-weight: bold;
   color: var(--blanco);
   margin-right: 8px;
+  margin-bottom: 10px;
 }
 .links-a-inicio a:hover{
   color: var(--colorAcento);
 }
-a.links-juego{
-  margin-top: 20px;
-  margin-right: 10px;
-}
+
 
 .links-a-inicio{
   display: flex;
@@ -1168,7 +1167,6 @@ a.links-juego{
   font-weight: var(--weight);
   margin-left:15px;
   margin-right: 15px;
-  margin-top: 3%;
   text-align: justify;
 
 }
@@ -1461,7 +1459,7 @@ div .contenedor{
   display: flex;
   border-radius: 10px;
   margin-left: 15px;
-  margin-top: 10px;
+  margin-top: -15px;
   width: 101px;
   height: 48px;
   border-radius: 10px;
@@ -2213,7 +2211,6 @@ p#tiempo{
 div p{
   font-family: var(--fuente);
   font-size: 20px;
-  margin-top: 20px;
   margin-bottom: 20px;
   color: var(--blanco);
 }
