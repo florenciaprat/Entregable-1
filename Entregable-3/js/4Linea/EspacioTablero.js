@@ -7,6 +7,7 @@ class EspacioTablero {
         this.ctx=ctx;
         this.image = new Image();
         this.ficha=null;
+        
     }
     getY(){
         return this.y;
@@ -49,12 +50,12 @@ class EspacioTablero {
         }
     }
     
-    // getTipoDeFicha(){
-    //     if(this.ficha != null){
-    //         return this.ficha.getJugador();
-    //     }
-    //     else{
-    //         return null;
-    //     }
-    // }
+     getTipoDeFicha(){
+         if(this.ficha != null){
+             return this.ficha.getJugador();
+         }
+         else{
+             return null;
+         }
+     }
 }

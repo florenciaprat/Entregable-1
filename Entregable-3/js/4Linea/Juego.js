@@ -186,7 +186,7 @@ function finalizarJuego(){
     iniciarTiempo(false);
     titulo.style.display ="none";
     ganador.style.display = "block";
-    ganador.innerHTML = `Gano `+ turno.getNombre();
+    ganador.innerHTML = `GANÓ `+ turno.getNombre();
     for(let i = 0; i < fichasJugador1.length; i++){
         fichasJugador1[i].ponerEnTablero(false);
         fichasJugador2[i].ponerEnTablero(false);
@@ -215,7 +215,7 @@ function clearCanvas(){
 }
 
 
-//Jugar 4 en linea
+//Jugar juego
 document.querySelector("#play-game").addEventListener('click',()=>{
     document.querySelector('.canvas').style.display="flex";
     document.querySelector('.canvas-form').style.display="none";
@@ -401,11 +401,25 @@ function cambiarTurno(){
         titulo.style.color="#FF7A00";
     }
 }
+/*
+let contadorJugador1 = 0;
+let contadorJugador11 = 0;
+const contadorJugador2 = 0;
+const ultimaPosXJugador1=0;
+const ultimaPosYJugador1=0;
+const ultimaPosXJugador2=0;
+const ultimaPosYJugador2=0; 
+*/
 
 //Insertar Ficha
 function insertarFicha(columna){
+   
     for(let i = matriz.length-1; i >= 0; i--){
         let fila = matriz[i];
+        let m =matriz[i][columna];
+           
+        
+      
         if(!fila[columna].estaOcupada()){
             fila[columna].setFicha(fichaActual);
             let x = (fila[columna].getX() +TAMESPACIO/1.8);
@@ -414,15 +428,13 @@ function insertarFicha(columna){
             fichaActual.ponerEnTablero(false);
             mover(x,y);
             drawFigures();
-            ControlarGanador(fila,columna);
-
-            
+            ControlarGanador(fila,columna,m);
             break;
         }
         else if(i == 0){
             fichaActual.posInicial();
             drawFigures();
-            ControlarGanador(fila,columna);
+            ControlarGanador(fila,columna,m);
             cambiarTurno()
 
         }
@@ -430,12 +442,14 @@ function insertarFicha(columna){
 }
 
 
-function ControlarGanador(fila,columna) {
-    
+function ControlarGanador(fila,columna,m) {
+
+   //console.log("la X: "+m.getX() +" la Y: "+m.getY()+" juagador: "+m.getJugador());
     let jugadorActual = fila[columna].getFicha().getJugador();
     let contador = 1; // Contador inicia en 1 por la ficha actual
 
-
+    //Se verifica la presencia de fichas del mismo jugador en una fila hacia la izquierda desde una columna dada. Incrementando un contador cada vez que encuentra una ficha del jugador actual y deteniéndose si encuentra 
+    //una ficha de otro jugador o si no hay más columnas que explorar en esa dirección.
     // Verificar hacia la izquierda
     for (let j = columna - 1; j >= 0; j--) {
         if (fila[j].getFicha() && fila[j].getFicha().getJugador() === jugadorActual) {
@@ -445,6 +459,9 @@ function ControlarGanador(fila,columna) {
         }
     }
 
+
+    //Serifica la presencia de fichas del mismo jugador en una fila hacia la derecha desde una columna dada. Se incrementa un contador cada vez que se encuentra una ficha del jugador actual. El bucle se detiene si se encuentra 
+    //una ficha de otro jugador o si no hay más columnas que explorar en esa dirección.
     // Verificar hacia la derecha
     for (let j = columna + 1; j < numColumn; j++) {
         if (fila[j].getFicha() && fila[j].getFicha().getJugador() === jugadorActual) {
@@ -459,20 +476,51 @@ function ControlarGanador(fila,columna) {
         return;
     }
 
-   /* VERIFICAR VERTICALES- NO ANDA
-        for (let i = 0; i < numFilas; i++) {
-            if (columna.getFicha() && columna.getFicha().getJugador() === jugadorActual) {
-                contador++;
-            } else {
-                break; // Dejar de contar si no hay una ficha del mismo jugador
-            }
-        }
-       
-    if (contador >= cantEnLinea) {
-        console.log("Se ganó en una columna vertical.");
-        // Aquí puedes finalizar el juego o tomar otras medidas.
+   // VERIFICAR VERTICALES
+   
+   /*const posicionX = m.getX();
+   const posicionY = m.getY();
+   if (jugadorActual === 1) {
+    if(ultimaPosXJugador1===0&&ultimaPosYJugador1===0){
+        ultimaPosXJugador1=posicionX;
+        ultimaPosYJugador1=posicionY;
     }
+       if (posicionX === ultimaPosXJugador1 && Math.abs(posicionY - ultimaPosYJugador1) <= 60) {
+        
+        contadorJugador1++;
+        
+        return contadorJugador1;  
+       } else {
+           contadorJugador1 = 0;
+           return 0;
+       }
+
+       ultimaPosXJugador1 = posicionX;
+       ultimaPosYJugador1 = posicionY;
+    
+   } /*else if (jugadorActual === 2) {
+       if (posicionX === ultimaPosXJugador2 && Math.abs(posicionY - ultimaPosYJugador2) <= 60) {
+           contadorJugador2++;
+       } else {
+           contadorJugador2 = 0;
+       }
+
+       ultimaPosXJugador2 = posicionX;
+       ultimaPosYJugador2 = posicionY;
+
+       if (contadorJugador2 >= 4) {
+           console.log(`El jugador 2 ha ganado.`);
+       }
+   }
 */
+
+
+
+
+
+    
+//La verificación de la diagonal se realiza comprobando si las celdas se recorren en incrementos tanto en las filas como en las columnas dentro de un bucle anidado. Si ambas coordenadas (fila y columna) se incrementan simultáneamente, 
+//entonces se está recorriendo una diagonal descendente.
     // Verificar diagonales descendentes
     for (let i = 0; i <= numFilas - cantEnLinea; i++) {
         for (let j = 0; j <= numColumn - cantEnLinea; j++) {
@@ -489,6 +537,8 @@ function ControlarGanador(fila,columna) {
         }
     }
 
+//Se recorren las celdas en incrementos tanto en las filas como en las columnas dentro de un bucle anidado para verificar si se encuentra una diagonal ascendente 
+//con la longitud de secuencia requerida. Si se encuentra, se finaliza el juego.
     // Verificar diagonales ascendentes
     for (let i = cantEnLinea - 1; i < numFilas; i++) {
         for (let j = 0; j <= numColumn - cantEnLinea; j++) {
@@ -511,9 +561,8 @@ function ControlarGanador(fila,columna) {
 
 
 
-
-
-
+//Se utiliza un bucle de intervalo para actualizar continuamente la posición de la ficha en incrementos hasta que alcanza la posición deseada (x, y). Luego, 
+//detiene la animación y actualiza la representación gráfica de las figuras en la pantalla.
 function mover(x,y){
 let pos=0;
 let fichaAnimada = new Ficha();
