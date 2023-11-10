@@ -1,0 +1,23 @@
+:root{
+    --color_amarilo: #FFE901;
+    --color_celeste: #2982FF;
+    --color_blanco: #FFFFFF;
+    --color_azul: #02187E;
+    --color_negro : #000000;
+    --color_gris_oscuro: #242424;
+    --color_gris_claro: #5E5E5D;
+
+    --h1: 60px;
+    --p_regular: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav{
+    width: 100%;
+    height: 103px;
+    background-color: var(--color_celeste);
+}
