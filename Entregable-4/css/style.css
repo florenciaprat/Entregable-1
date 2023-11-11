@@ -1,23 +1,302 @@
-:root{
-    --color_amarilo: #FFE901;
-    --color_celeste: #2982FF;
-    --color_blanco: #FFFFFF;
-    --color_azul: #02187E;
-    --color_negro : #000000;
-    --color_gris_oscuro: #242424;
-    --color_gris_claro: #5E5E5D;
-
-    --h1: 60px;
-    --p_regular: 20px;
-}
-
-*{
+body {
+    /* background-color: #5499F8; */
     margin: 0;
-    padding: 0;
-}
-
-.header__nav{
+    font-family: sans-serif;
+  }
+  
+/****************-----GENERAL------ ****************/
+  
+  .full-width {
     width: 100%;
+  }
+  
+  .width-1080 {
+    width: 1080px;
+    height: 720px;
+  }
+  
+/****************----HEADER----- ****************/
+  header {
+    z-index: 2;
+    background: linear-gradient(to bottom,#5499F8 75%, #5498f800 95%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 227px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  header.fixed {
+    z-index: 100000;
+    position: fixed;
+    top: 0;
     height: 103px;
-    background-color: var(--color_celeste);
-}
+    background: linear-gradient(to bottom,#5499F8 85%, #5498f800 95%);
+  }
+  
+  #logo {
+    width: 590px;
+    height: 301px;
+    margin-top: 91px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #logo.fixed-img {
+    position: absolute;
+    top: 16px;
+    width: 133px;
+    height: 68px;
+    margin-top: 0px;
+  }
+  
+  /* Menu hamburguesa */
+  #btn-menu {
+    position: absolute;
+    width: 42px;
+    height: 36px;
+    translate: (-50%, -50%);
+    cursor: pointer;
+    left: 100px;
+    top: 20px;
+  }
+  
+  
+  #linea-1,
+  #linea-2,
+  #linea-3 {
+    display: block;
+    width: 34px;
+    height: 4px;
+    background-color: #FFE901;
+    border-radius: 30px;
+    border: solid 4px #2981FF;
+    transform-origin: 0px 100%;
+    transition: all 300ms;
+    box-shadow: 5px 5px rgba(2, 24, 126, 1);
+  }
+  
+  #linea-1.activar-linea-1 {
+    transform: rotate(45deg) translate(-2px, -5px);
+    box-shadow:none;
+    
+  }
+  
+  #linea-2.activar-linea-2 {
+    opacity: 0;
+    margin-left: -30px;
+  }
+  
+  #linea-3.activar-linea-3 {
+    transform: rotate(-45deg) translate(7px, 7px);
+    box-shadow:none;
+  }
+  
+  #btn-comprar {
+    position: absolute;
+    right: 100px;
+    top: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #FFE901;
+    border-radius: 30px;
+    border: solid 4px #2981FF;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #02187E;
+    box-shadow: 5px 5px rgba(2, 24, 126, 1);
+    -webkit-text-stroke: 1px #02187E;
+    cursor: pointer;
+  }
+
+
+/**************** SECCION 1 ****************/
+#seccion-1 {
+    position: relative;
+    height: 720px;
+    margin-top: 126px;
+    display: flex;
+  }
+  
+  #seccion-1 img#fondo1 {
+    width: 100%;
+    height: 720px;
+  }
+  
+  #seccion-1 img#edificio1, 
+  #seccion-1 img#edificio2,
+  #seccion-1 img#edificio3 {
+    position: absolute;
+    z-index: 3;
+  }
+  
+  #seccion-1 img#edificio1 {
+    height: 720px;
+    width: 460px;
+    bottom: 0;
+    left: -55px;
+  }
+  
+  #seccion-1 img#edificio2 {
+    height: 727.5;
+    width: 390px;
+    bottom: 0px;
+    right: -7px;
+  }
+  
+  #seccion-1 img#edificio3 {
+    left: 29.5%;
+    height: 213.5px;
+    width: 560px;
+    bottom: -10px;
+  }
+  
+  #seccion-1 img#personaje1,
+  #seccion-1 img#personaje2,
+  #seccion-1 img#personaje3 {
+    position: absolute;
+    z-index: 6;
+  
+  }
+  
+  #seccion-1 img#personaje1 {
+    width: 360px;
+    height: 444px;
+    left: 91px;
+    top: 262px;
+  }
+  
+  #seccion-1 img#personaje2 {
+    width: 465px;
+    height: 465px;
+    left: 33.3%;
+    top: 277px;
+  }
+  
+  #seccion-1 img#personaje3 {
+    width: 393px;
+    height: 393px;
+    right: 170px;
+    top: 209px;
+  }
+  
+  #seccion-1 img#tela-araña-izq,
+  #seccion-1 img#tela-araña-der {
+    position: absolute;
+    z-index: 100;
+  }
+  
+  #seccion-1 img#tela-araña-izq {
+    left: -170px;
+    bottom: -200px;
+  }
+  
+  #seccion-1 img#tela-araña-der {
+    right: -170px;
+    bottom: 70px;
+  }
+
+/**************** SECCION 2 "Conoce a Spidey y sus sorprendentes amigos" ****************/
+ #seccion-2 {
+    position: relative;
+    top: -70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+  
+  #seccion-2 div.full-width {
+    position: absolute;
+    top: 3px;
+    z-index: 0;
+    background-color: #8F6AA6;
+    width: 100%;
+    height: 844px;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 85%);
+  }
+  
+  #seccion-2 div.width-1080 {
+    z-index: 1;
+    position: relative;
+    display: flex;
+  }
+  
+  #seccion-2 div.width-1080 div.texto {
+    position: absolute;
+  }
+  
+  #seccion-2 div.width-1080 div.personaje {
+    position: absolute;
+    right: -65px;
+    top: 150px;
+  }  
+  
+  #seccion-2 div.width-1080 div.texto h2 {
+    color: white;
+    font-size: 60px;
+    font-weight: 400;
+    width: 585px;
+    margin: 0;
+    margin-top: 200px;
+  }
+  
+  #seccion-2 div.width-1080 div.texto p {
+    color: white;
+    font-size: 20px;
+    width: 580px;
+  }
+  
+  #seccion-2 div.width-1080 div.texto img#spideys-edificio {
+    width: 751.65px;
+    height: 413.13px;
+  }
+  
+  #seccion-2 div.width-1080 div.pesonaje img#personaje{
+    
+    width: 553px;
+    height: 921px;
+    z-index: 2;
+  }
+  
+/**************** SECCION 3 Introduccion de los Spidermans****************/
+#seccion-3 {
+    position: relative;
+    width: 100%;
+    height: 1085px;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #seccion-3 div.width-1080 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+  }
+  
+  #seccion-3 div div.card-personaje {
+    width: 332.96px;
+  }
+  
+  #seccion-3 div div.card-personaje p{
+    font-size: 20px;
+  }
+
+/**************** SECCION 4 Pistas ****************/
+
+
+/**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
+
+/**************** SECCION 6 "Mas amigos, mas diversión!" ****************/
+
+
+/**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
+
+/**************** SECCION 8 "Lo último de SPIDEY Y SUS AMIGOS en tu buzón de correo electrónico" ****************/
+
+/**************** FOOTER ****************/
