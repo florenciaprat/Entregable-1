@@ -1,8 +1,8 @@
 body {
-    /* background-color: #5499F8; */
-    margin: 0;
-    font-family: sans-serif;
-  }
+  margin: 0;
+ 
+  font-family: 'Lato', sans-serif;  
+}
   
 /****************-----TODO------ ****************/
 
@@ -334,7 +334,10 @@ body {
 
 /**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
 
+
+
 /**************** SECCION 6 "Mas amigos, mas diversión!" ****************/
+
 
 
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
@@ -393,6 +396,72 @@ body {
 }
 
 /**************** SECCION 8 "Lo último de SPIDEY Y SUS AMIGOS en tu buzón de correo electrónico" ****************/
+.theLast {
+  height: auto;
+  position: relative;
+  top: 0em;
+}
+.backgroundsky {
+  height: auto;
+  position: relative;
+  top: -1em;
+}
+.backgroundsky img {
+  width: 100%;
+  height: auto;
+}
+
+.buildings {
+  position: absolute;
+  top:27.5em;
+  width: 100%;
+}
+
+.buildings img {
+  width: 100%;
+}
+.titleSpidey {
+  position: absolute;
+  display: flex;
+  top:  90px;
+  left: 270px;
+  justify-content: center;
+  width: 760px;
+}
+
+.titleSpidey h1 {
+  color: #000;
+  text-align: center;
+  font-size: 60px;
+  line-height: 94.5%; 
+}
+
+.textoInscribirse {
+  position: absolute;
+  top: 400px; 
+  width: auto;
+  left: 320px;
+  color: #000;
+}
+.textoInscribirse p{
+  width: 30em;
+  font-size: 22px;
+}
+.advertencia{
+  position: absolute;
+  top: 560px;
+  left: 320px;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+
+
+
+
+
 
 /**************** FOOTER ****************/
 footer{
