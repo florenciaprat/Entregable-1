@@ -269,7 +269,7 @@ body {
 #seccion-3 {
     position: relative;
     width: 100%;
-    height: 1085px;
+    height: 1065px;
     z-index: 0;
     display: flex;
     justify-content: center;
@@ -291,54 +291,139 @@ body {
   }
 
 /**************** SECCION 4 Pistas ****************/
-#seccion-4 {
-  height: 600px;
-  width: 100%;
-  display: flex;
+.group-four{
+  margin-top: 145px;
   position: relative;
-}
-#fondoGhostSpider {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-
-}
-.centersec4 {
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
 }
-.cardsec4 {
-  width: 546.108px;
-  height: 326.509px;
+.group-four #card1{
   position: absolute;
-  background-size: cover;
+  left: 50px;
+  top: -160px;
 }
-#ghosSpiderCard1 {
-  z-index: 2;
-  top: -90px;
-  transform: rotate(-13.078deg);
+.group-four #card2{
+  position: absolute;
+  left: 20px;
+  top: -20px;
 }
-#ghosSpiderCard2 {
-  z-index: 3;
-  top: 90px;
-  transform: rotate(-26.474deg);
+.group-four #card3{
+  position: absolute;
+  left: 53px;
+  top: 167px;
 }
-#ghosSpiderCard3 {
-  z-index: 4;
-  top: 335px;
-  transform: rotate(-1.016deg);
-}
-
 /**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
+.seccionFive{
+  background-color: black;
+  position: relative;
+  width: 100%;
+  top: -270px;
+  height: 1400px;
+  display: flex;
+  justify-content: center;
+  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 85%);
 
+}
+.seccionFive #title{
+  position: absolute;
+  top: 210px;
+  color: #FFF;
+  font-size: 60px;
+  width: 507px;
+  left: 104px;
+}
+.seccionFive #phanter{
+  position: absolute;
+  right: 240px;
+  top: 220px;
+  z-index: 1;
+}
+.seccionFive #elastic{
+  position: absolute;
+  left: 128px;
+  top: 395px;
+  z-index: 4;
+}
+.seccionFive #hulk{
+  position: absolute;
+  right: 45px;
+  top: 595px;
+  z-index: 4;
+}
+.seccionFive .fondo{
+  position: relative;
+  top: 490px;
+  left: 0px;
+}
+.seccionFive .fondo #part2{
+  position: absolute;
+  left: 0px;
+  z-index: 5;
+}
+.seccionFive .fondo #part3{
+  position: absolute;
+  left: 0px;
+  z-index: 3;
+}
 
 
 /**************** SECCION 6 "Mas amigos, mas diversión!" ****************/
 
+.seccionSix{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 1940px;
 
+}
+.seccionSix #rectBlanco{
+  position:absolute;
+  z-index: 1;
+  top: -230px;
+}
+.seccionSix .width-1080 #title{
+  width: 802px;
+  position: relative;
+  right: 0px;
+  color: #000;
+  margin-bottom: 69px;
+  z-index: 2;
+}
+.seccionSix .width-1080 #mas-diversion{
+  display: flex;
+  flex-direction: column;
+  gap: 121px;
+  z-index: 2;
+}
+.seccionSix .width-1080 #mas-diversion .card-diversion .img{
+  height: fit-content;
+}
+.seccionSix .width-1080 #mas-diversion .card-diversion{
+  display: flex;
+  gap: 57px;
+  z-index: 2;
+}
+.seccionSix .width-1080 #mas-diversion .card-diversion .title{
+  color: #000;
+  width: 467px;
+  font-size: 40px;
+}
+.seccionSix .width-1080 #mas-diversion .card-diversion .text{
+  color: #000;
+  margin-top: 25px;
+  width: 467px;
+}
+.seccionSix .width-1080 #mas-diversion .card-diversion #text1{
+  height: 152px;
+}
+.seccionSix .width-1080 #mas-diversion .card-diversion #text2{
+  height: 152px;
+}
+.seccionSix .width-1080 #mas-diversion .card-diversion #text3{
+  height: 208px;
+}
+.seccionSix .width-1080 #mas-diversion .card-diversion #text4{
+  height: 171px;
+}
 
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
 #negro{
@@ -465,8 +550,51 @@ body {
 
 /**************** FOOTER ****************/
 footer{
-  background-color:  rgb(101, 101, 101);
-  margin-right: 5%;
-  position: relative;
-  z-index: 2;
+  width: 100%;
+  height: 673px;
+  background-color: #5E5E5D;
+}
+
+.plataforms-container{
+  width: 100%;
+  height: 75px;
+  background-color: #242424;
+}
+
+.plataforms{
+  width: 1080px;
+  height: 75px;
+  margin: auto;
+}
+
+.plataforms img{
+  width: 100%;
+  height: 100%;
+}
+
+.information-container{
+  width: 1080px;
+  height: 361px;
+  margin: auto;
+  margin-top: 38px;
+}
+
+.information-container .font-footer{
+  width: 820px;
+  color: #FFF;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  letter-spacing: 2.2px;
+  text-decoration-line: underline;
+}
+
+.cookies{
+  margin-top: 20px;
+}
+
+.social{
+  margin-top: 38px;
 }
