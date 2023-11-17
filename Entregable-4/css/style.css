@@ -1,7 +1,16 @@
 body {
-  margin: 0;
- 
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1280px;
+  height: 8968px;
+  overflow-x: hidden;
+  background-color: #000;
   font-family: 'Lato', sans-serif;  
+}
+
+html {
+  width: 1280px;
+  background-color: #fff;
 }
   
 /****************-----TODO------ ****************/
@@ -9,14 +18,8 @@ body {
     /* VER PARA QUEDE BIEN LA PAGINA QUE NO HAYA SCROLL HORIZONTAL Y QUE SE ENTRE TODO EN LA PANTALLA 
     ------PROBLEMA CON DIMENSIONES---- */
 
-  .full-width {
-    width: 100%;
-  }
   
-  .width-1080 {
-    width: 1080px;
-    height: 720px;
-  }
+
   
 /****************----HEADER----- ****************/
   header {
@@ -203,7 +206,7 @@ body {
   }
 
 /**************** SECCION 2 "Conoce a Spidey y sus sorprendentes amigos" ****************/
- #seccion-2 {
+  #seccion-2 {
     position: relative;
     top: -70px;
     display: flex;
@@ -212,7 +215,7 @@ body {
     z-index: 5;
   }
   
-  #seccion-2 div.full-width {
+  #seccion-2 .fondoseccion2{
     position: absolute;
     top: 3px;
     z-index: 0;
@@ -222,23 +225,22 @@ body {
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 85%);
   }
   
-  #seccion-2 div.width-1080 {
+  #seccion-2 .seccion2 {
     z-index: 1;
-    position: relative;
     display: flex;
   }
   
-  #seccion-2 div.width-1080 div.texto {
-    position: absolute;
+  #seccion-2 .seccion2 div.texto {
+    margin-left: -315px;
   }
   
-  #seccion-2 div.width-1080 div.personaje {
+  #seccion-2 .seccion2 div.personaje {
     position: absolute;
-    right: -65px;
+    right: -25px;
     top: 150px;
   }  
   
-  #seccion-2 div.width-1080 div.texto h2 {
+  #seccion-2 .seccion2 div.texto h2 {
     color: white;
     font-size: 60px;
     font-weight: 400;
@@ -247,49 +249,54 @@ body {
     margin-top: 200px;
   }
   
-  #seccion-2 div.width-1080 div.texto p {
+  #seccion-2 .seccion2 div.texto p {
     color: white;
     font-size: 20px;
     width: 580px;
   }
   
-  #seccion-2 div.width-1080 div.texto img#spideys-edificio {
+  #seccion-2 .seccion2 div.texto img#spideys-edificio {
     width: 751.65px;
     height: 413.13px;
   }
   
-  #seccion-2 div.width-1080 div.pesonaje img#personaje{
+  #seccion-2 .seccion2 div.pesonaje img#personaje{
     
     width: 553px;
     height: 921px;
     z-index: 2;
   }
   
+  
 /**************** SECCION 3 Introduccion de los Spidermans****************/
 #seccion-3 {
-    position: relative;
-    width: 100%;
-    height: 1065px;
-    z-index: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #seccion-3 div.width-1080 {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 200px;
-  }
-  
-  #seccion-3 div div.card-personaje {
-    width: 332.96px;
-  }
-  
-  #seccion-3 div div.card-personaje p{
-    font-size: 20px;
-  }
+  position: relative;
+  margin-top: -300px;
+  margin-bottom: -260px;
+  width: 100%;
+  height: 1085px;
+  background-color: white;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+#seccion-3 div.historias {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 300px;
+  height: 720px;
+}
+
+#seccion-3 div div.card-personaje {
+  width: 332.96px;
+}
+
+#seccion-3 div div.card-personaje p{
+  font-size: 20px;
+}
 /**************** SECCION 4 Pistas ****************/
 .group-four{
   margin-top: 145px;
@@ -380,7 +387,7 @@ body {
   z-index: 1;
   top: -230px;
 }
-.seccionSix .width-1080 #title{
+.seccionSix #title{
   width: 802px;
   position: relative;
   right: 0px;
@@ -388,40 +395,40 @@ body {
   margin-bottom: 69px;
   z-index: 2;
 }
-.seccionSix .width-1080 #mas-diversion{
+.seccionSix #mas-diversion{
   display: flex;
   flex-direction: column;
   gap: 121px;
   z-index: 2;
 }
-.seccionSix .width-1080 #mas-diversion .card-diversion .img{
+.seccionSix #mas-diversion .card-diversion .img{
   height: fit-content;
 }
-.seccionSix .width-1080 #mas-diversion .card-diversion{
+.seccionSix #mas-diversion .card-diversion{
   display: flex;
   gap: 57px;
   z-index: 2;
 }
-.seccionSix .width-1080 #mas-diversion .card-diversion .title{
+.seccionSix #mas-diversion .card-diversion .title{
   color: #000;
   width: 467px;
   font-size: 40px;
 }
-.seccionSix .width-1080 #mas-diversion .card-diversion .text{
+.seccionSix #mas-diversion .card-diversion .text{
   color: #000;
   margin-top: 25px;
   width: 467px;
 }
-.seccionSix .width-1080 #mas-diversion .card-diversion #text1{
+.seccionSix #mas-diversion .card-diversion #text1{
   height: 152px;
 }
-.seccionSix .width-1080 #mas-diversion .card-diversion #text2{
+.seccionSix #mas-diversion .card-diversion #text2{
   height: 152px;
 }
-.seccionSix .width-1080 #mas-diversion .card-diversion #text3{
+.seccionSix #mas-diversion .card-diversion #text3{
   height: 208px;
 }
-.seccionSix .width-1080 #mas-diversion .card-diversion #text4{
+.seccionSix #mas-diversion .card-diversion #text4{
   height: 171px;
 }
 
@@ -588,11 +595,12 @@ footer{
   font-weight: 400;
   line-height: 94.5%;
   letter-spacing: 2.2px;
-  text-decoration-line: underline;
 }
 
 .cookies{
   margin-top: 20px;
+  text-decoration-line: underline;
+
 }
 
 .social{
