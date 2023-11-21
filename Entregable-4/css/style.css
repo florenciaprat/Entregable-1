@@ -9,7 +9,7 @@ body {
 
 html {
   width: 1280px;
-  background-color: #fff;
+  
 }
 /****************----HEADER----- ****************/
   header {
@@ -106,7 +106,13 @@ html {
     box-shadow: 5px 5px rgba(2, 24, 126, 1);
     -webkit-text-stroke: 1px #02187E;
     cursor: pointer;
-  }
+    transition: transform 0.3s ease; /* Agregamos una transición de 0.3 segundos en la propiedad transform */
+}
+
+#btn-comprar:hover {
+  transform: scale(1.1); /* Cambiamos la escala al hacer hover */
+  background-color: #ffaf01;
+}
 
 
 /**************** SECCION 1 ****************/
@@ -362,58 +368,42 @@ html {
 }
 
 /**************** SECCION 6 "Mas amigos, mas diversión!" ****************/
-#seccion-6{
+.container {
   display: flex;
-  justify-content: center;
-  background-color: white;
-  height: 2000px;
-  margin-top: -1px;
+  height: 100vh;
+  overflow: hidden;
 }
 
-#seccion-6 .masamigos {
-  height: 720px;
-}
-
-#seccion-6 h2 {
-  font-size: 60px;
-}
-
-#seccion-6 h3{
-  font-size: 40px;
-  font-weight: 500;
-  margin: 0;
-  width: 467px;
-}
-
-#seccion-6 p {
-  font-size: 20px;
-  width: 467px;
-}
-
-#seccion-6 div.container-scroll{
-  display: flex;
-  justify-content: space-between;
-}
-
-#col-img {
-  width: 556px;
+.image-container {
   position: sticky;
-  top: 200px;
+  top: 0;
+  flex: 1;
+  overflow: hidden;
 }
 
-#col-textos .col-texto {
-  height: 460px;
-  margin-top: 10px;
-   margin: 9px 50px; 
+.image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-#col-img img{
-  margin-bottom: 159px;
-  margin-top: 10px;
-  width: 556px;
-  height: 301px;
-
+.image.visible {
+  opacity: 1;
 }
+
+.text-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.text {
+  margin-bottom: 40px;
+}
+
+
 
 
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
@@ -555,7 +545,7 @@ html {
  
  .inputMail button {
    background-color: #FFE901;
-   box-shadow: 5px 5px rgba(2, 24, 126, 1);
+   box-shadow: 5px 5px #02187e;
    border: solid 9px #2981FF;
    border-radius: 0 50px 50px 0;
    height: 99.5px;
@@ -630,4 +620,145 @@ footer{
 
 .social{
   margin-top: 38px;
+}
+
+/*---------LOADER-----------*/
+.loader { 
+  border: 16px solid #fffafa; 
+  border-top: 16px solid rgb(253, 32, 3); 
+  border-radius: 50%; 
+  width: 120px; 
+  height: 120px; 
+  animation: spinloader 2s linear infinite; 
+} 
+.loader img{ 
+  height : 120px; 
+  width : 120px; 
+  animation: spinlogo 2s linear infinite; 
+} 
+img.img-loader{
+  width: 120px;
+  height: 130px;
+}
+
+@keyframes spinloader { 
+  0% { transform: rotate(0deg); } 
+  100% { transform: rotate(360deg); } 
+} 
+@keyframes spinlogo { 
+  0% { transform: rotate(360deg); } 
+  100% { transform: rotate(0deg); } 
+} 
+/*------CARGA---------------*/
+.container-progress{
+  display: flex;
+  width: 400px;
+  padding: 50px 0;
+  border-radius: 8px;
+  row-gap: 30px;
+  background-color: #ce0000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left:473px;
+  margin-top:8%;
+  margin-bottom: 8%;
+}
+.logo-progress{
+  margin: 5px;
+  width: 200px;
+  height: 89px;
+}
+.circular-progress{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: conic-gradient(#af1717 3.6deg, #e82a2a 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular-progress::before{
+  content: "";
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  background-image: url("./img/loader.png");
+}
+.progress-value{
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+#body-loader{
+  
+  background-color: #02187e;
+}
+
+.contenedorTextoCambiante{
+  margin-bottom: 200px;
+  }
+  
+  
+  .tituloSeccionImgConTexto{
+      padding-top: 100px;
+  }
+  /*IMAGENES CON TEXTO*/
+
+.seccion-imagenes-con-texto {
+  display: flex;
+  padding-top: 00px;
+}
+
+.seccion-img img{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.textoCambiante p{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+
+/*titulo mas amigos, mas diversion*/
+.fijo h2 {
+  width: 802px;
+  color: #000;
+  font-family: Lato;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 94.5%;
+  /* 56.7px */
+  margin: 50px;
+  margin-left: 0px;
+}
+
+.textoCambiante {
+  padding: 50px;
+}
+
+.textoCambiante h3 {
+  color: #000;
+  font-family: Lato;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  /* 37.8px */
+}
+
+.textoCambiante p {
+  color: #000;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  /* 18.9px */
 }
