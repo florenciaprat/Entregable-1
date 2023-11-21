@@ -4,7 +4,6 @@ body {
   max-width: 1280px;
   height: 8968px;
   overflow-x: hidden;
-  background-color: #000;
   font-family: 'Lato', sans-serif;  
 }
 
@@ -12,15 +11,6 @@ html {
   width: 1280px;
   background-color: #fff;
 }
-  
-/****************-----TODO------ ****************/
-
-    /* VER PARA QUEDE BIEN LA PAGINA QUE NO HAYA SCROLL HORIZONTAL Y QUE SE ENTRE TODO EN LA PANTALLA 
-    ------PROBLEMA CON DIMENSIONES---- */
-
-  
-
-  
 /****************----HEADER----- ****************/
   header {
     z-index: 2;
@@ -237,7 +227,7 @@ html {
   #seccion-2 .seccion2 div.personaje {
     position: absolute;
     right: -25px;
-    top: 150px;
+    top: 80px;
   }  
   
   #seccion-2 .seccion2 div.texto h2 {
@@ -320,22 +310,21 @@ html {
 }
 /**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
 .seccionFive{
-  background-color: black;
+  background-color: black ;
+  /*clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 85%); PONER LA IMAGEN ARRIBA */ 
   position: relative;
   width: 100%;
-  top: -270px;
-  height: 1400px;
+  top: -100px;
+  height: 1000px;
   display: flex;
   justify-content: center;
-  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 85%);
-
 }
+
 .seccionFive #title{
   position: absolute;
-  top: 210px;
+  top: 260px;
   color: #FFF;
-  font-size: 60px;
-  width: 507px;
+  width: 667px;
   left: 104px;
 }
 .seccionFive #phanter{
@@ -371,7 +360,6 @@ html {
   left: 0px;
   z-index: 3;
 }
-
 
 /**************** SECCION 6 "Mas amigos, mas diversión!" ****************/
 #seccion-6{
