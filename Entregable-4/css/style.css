@@ -120,7 +120,7 @@ html {
 #seccion-1 {
   position: relative;
   /* z-index: 1; */
-  background-image: url('TPInterfaces\img\Seccion1\fondo1.png');
+  background: url("/TPInterfaces/Entregable-4/img/Seccion1/fondo1.png");
   /* background-size:contain; */
   height: 850px;
   margin-top: 126px;
