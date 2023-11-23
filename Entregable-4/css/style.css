@@ -116,95 +116,111 @@ html {
 
 
 /**************** SECCION 1 ****************/
+
 #seccion-1 {
-    position: relative;
-    height: 720px;
-    margin-top: 126px;
-    display: flex;
-  }
-  
-  #seccion-1 img#fondo1 {
-    width: 100%;
-    height: 720px;
-  }
-  
-  #seccion-1 img#edificio1, 
-  #seccion-1 img#edificio2,
-  #seccion-1 img#edificio3 {
-    position: absolute;
-    z-index: 3;
-  }
-  
-  #seccion-1 img#edificio1 {
-    height: 720px;
-    width: 460px;
-    bottom: 0;
-    left: -55px;
-  }
-  
-  #seccion-1 img#edificio2 {
-    height: 727.5;
-    width: 390px;
-    bottom: 0px;
-    right: -7px;
-  }
-  
-  #seccion-1 img#edificio3 {
-    left: 29.5%;
-    height: 213.5px;
-    width: 560px;
-    bottom: -10px;
-  }
-  
-  #seccion-1 img#personaje1,
-  #seccion-1 img#personaje2,
-  #seccion-1 img#personaje3 {
-    position: absolute;
-    z-index: 6;
-  
-  }
-  
-  #seccion-1 img#personaje1 {
-    width: 360px;
-    height: 444px;
-    left: 91px;
-    top: 262px;
-  }
-  
-  #seccion-1 img#personaje2 {
-    width: 465px;
-    height: 465px;
-    left: 33.3%;
-    top: 277px;
-  }
-  
-  #seccion-1 img#personaje3 {
-    width: 393px;
-    height: 393px;
-    right: 170px;
-    top: 209px;
-  }
-  
-  #seccion-1 img#tela-araña-izq,
-  #seccion-1 img#tela-araña-der {
-    position: absolute;
-    z-index: 100;
-  }
-  
-  #seccion-1 img#tela-araña-izq {
-    left: -170px;
-    bottom: -200px;
-  }
-  
-  #seccion-1 img#tela-araña-der {
-    right: -170px;
-    bottom: 70px;
-  }
+  position: relative;
+  /* z-index: 1; */
+  background-image: url('TPInterfaces\img\Seccion1\fondo1.png');
+  /* background-size:contain; */
+  height: 850px;
+  margin-top: 126px;
+  display: flex;
+  overflow: hidden;
+
+  background-repeat: repeat-x;
+  /* background-size: cover; */
+  animation: scroll 40s infinite linear;
+}
+
+@keyframes scroll {
+  0% {background-position-x: 0px;}
+  100% {background-position-x: -1240px;}
+}
+
+#seccion-1 img#edificio1, 
+#seccion-1 img#edificio2,
+#seccion-1 img#edificio3 {
+  position: absolute;
+  z-index: 3;
+}
+
+#seccion-1 img#edificio1 {
+  height: 720px;
+  width: 460px;
+  bottom: 120px;
+  left: -55px;
+}
+
+#seccion-1 img#edificio2 {
+  height: 727.5px;
+  width: 390px;
+  bottom: 150px;
+  right: 0px;
+}
+
+#seccion-1 img#edificio3 {
+  left: 31%;
+  height: 213.5px;
+  width: 560px;
+  bottom: 120px;
+}
+
+#seccion-1 img#personaje1,
+#seccion-1 img#personaje2,
+#seccion-1 img#personaje3 {
+  position: absolute;
+  z-index: 6;
+  /* transform: translate(0px, 0px);*/
+  transition: transform 0.5s; 
+}
+
+#seccion-1 img#personaje1 {
+  width: 360px;
+  height: 444px;
+  left: 8%;
+  top: 262px;
+}
+
+#seccion-1 img#personaje2 {
+  width: 465px;
+  height: 465px;
+  /* left: 33.3%; */
+  left: 35%;
+  top: 277px;
+}
+
+#seccion-1 img#personaje3 {
+  width: 393px;
+  height: 393px;
+  right: 10%;
+  /* right: 170px; */
+  top: 209px;
+}
+#seccion-1 img#tela-araña-izq,
+#seccion-1 img#tela-araña-der {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  transition: transform 0.5s; 
+
+}
+
+#seccion-1 img#tela-araña-izq {
+  left: 0;
+  bottom: -70px;
+}
+
+#seccion-1 img#tela-araña-der {
+  right: -40px;
+  bottom: 200px;
+
+}
+
 
 /**************** SECCION 2 "Conoce a Spidey y sus sorprendentes amigos" ****************/
   #seccion-2 {
     position: relative;
-    top: -70px;
+    top: -200px;    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +239,7 @@ html {
   
   #seccion-2 .seccion2 {
     z-index: 1;
-    display: flex;
+    position: relative;
   }
   
   #seccion-2 .seccion2 div.texto {
@@ -232,8 +248,10 @@ html {
   
   #seccion-2 .seccion2 div.personaje {
     position: absolute;
-    right: -25px;
-    top: 80px;
+    right: -465px;
+    top: 0;
+    transform-origin: top;
+    transform: translateY(0);
   }  
   
   #seccion-2 .seccion2 div.texto h2 {
@@ -293,6 +311,43 @@ html {
 #seccion-3 div div.card-personaje p{
   font-size: 20px;
 }
+
+#card-1.fade-in {
+  animation: fadeIn 2s ease-in, moverDesdeAbajo 2s ease-in;
+}
+#card-2.fade-in {
+  animation: fadeIn 4s ease-in, moverDesdeAbajo 4s ease-in;
+}
+#card-3.fade-in {
+  animation: fadeIn 6s ease-in, moverDesdeAbajo 6s ease-in;
+}
+
+@keyframes fadeIn {  
+  from {  
+      opacity:0;  
+  }  
+
+  to {  
+      opacity:1;  
+  }  
+}
+
+@keyframes moverDesdeAbajo {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+#card-1,
+#card-2, 
+#card-3 {
+  transform: translateY(0);
+}
+
 /**************** SECCION 4 Pistas ****************/
 .group-four{
   margin-top: 145px;
@@ -622,7 +677,7 @@ footer{
   margin-top: 38px;
 }
 
-/*---------LOADER-----------*/
+/********************************** LOADER*****************************************************************/
 .loader { 
   border: 16px solid #fffafa; 
   border-top: 16px solid rgb(253, 32, 3); 
@@ -686,6 +741,7 @@ img.img-loader{
   width: 160px;
   border-radius: 50%;
   background-image: url("./img/loader.png");
+  
 }
 .progress-value{
   position: relative;
