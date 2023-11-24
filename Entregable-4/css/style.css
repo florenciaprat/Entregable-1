@@ -644,8 +644,9 @@ html {
 .underline{
   text-decoration: underline;
 }
-.inputMail {
+div.inputMail {
   display: flex;
+
  }
  
  .inputMail input{
@@ -880,4 +881,26 @@ img.img-loader{
   font-weight: 400;
   line-height: 94.5%;
   /* 18.9px */
+}
+
+
+/*-------------SPRIDESHEET PUNTO 13----------------------*/
+.sprite{
+  width:300px ;
+  height: 161px;
+  background-image: url("../img/personaje.png");
+  margin: 50px;
+  animation: correr 0.8s steps(5) infinite;
+  
+  
+}
+@keyframes correr{
+  0%{
+    background-position: 0px;
+
+  }
+  100%{
+    background-position: 1501px;
+
+  }
 }
