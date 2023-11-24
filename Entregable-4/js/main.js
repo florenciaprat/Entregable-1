@@ -96,3 +96,6 @@ document.addEventListener('scroll', fadeIn);
 
 // Llama a la función inicialmente para aplicar clases si es necesario al cargar la página
 fadeIn();
+ //---------------------------SECCION 6 --------------------------------------
+ 
+  

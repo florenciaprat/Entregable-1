@@ -1,118 +1,43 @@
+document.addEventListener('DOMContentLoaded', function () {
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Obtener las posiciones de los títulos e imágenes
-    let section6 = document.querySelector(".section6-colText");
-    let title1 = document.getElementById("title-1");
-    let title2 = document.getElementById("title-2");
-    let title3 = document.getElementById("title-3");
-    let title4 = document.getElementById("title-4");
+  window.addEventListener('scroll', function () {});});
+
+
+
+
+//selecciono cada clase y lo almaceno
+let game_1 = document.querySelector(".contenido-0");
+let game_2 = document.querySelector(".contenido-1");
+let game_3 = document.querySelector(".contenido-2");
+let game_4 = document.querySelector(".contenido-3");
+
+
+window.addEventListener("scroll", () => {  //listener cuando me desplazo por la pagina
+let seccion = document.querySelector(".datos-juego");
+const seccionY = seccion.getBoundingClientRect().y; //pos vertical 
+let value = seccionY; //almaceno la pos vertical
+console.log(value) //imprimo
+if(value >= -200 && value <= 300){ //rangos de pos vertical y muestra o remueve las classlist
   
-    let text1 = document.getElementById("text-1");
-    let text2 = document.getElementById("text-2");
-    let text3 = document.getElementById("text-3");
-    let text4 = document.getElementById("text-4");
-  
-    let texts = [text1, text2, text3, text4];
-  
-    let img1 = document.getElementById("image1");
-    let img2 = document.getElementById("image2");
-    let img3 = document.getElementById("image3");
-    let img4 = document.getElementById("image4");
-  
-    const observador = new IntersectionObserver(entries => {
-      //itera x cada entrada, por cada texto
-      entries.forEach(entry => {
-        //esta visible?
-        if (entry.isIntersecting) {
-          //indice del texto actual del arreglo texts, asi se ve cual texto es el visible
-          //entry.target(me devuelve el obj), indexof el indice de ese obj en arrglo
-     
-          const index = texts.indexOf(entry.target);
-  
-          //Ajusta la opacidad de todas las imágenes a 0, para q solo este visible la q yo quiero
-          [img1, img2, img3, img4].forEach(img => (img.style.opacity = 0));
-          //ajusta titulos
-          [text1, text2, text3, text4].forEach(title => (title.style.opacity = 0));
-  
-          [title1, title2, title3, title4].forEach(title => (title.style.opacity = 0));
-          
-          //segun la pos en el arreglo sera la imagen y texto q quiero ver
-          switch (index) {
-            case 0:
-              img1.style.opacity = 1;
-              text1.style.opacity = 1;
-              title1.style.opacity = 1;
-             // title2.style.opacity =0;
-              break;
-            case 1:
-              img2.style.opacity = 1;
-              text1.style.opacity = 0;
-              title1.style.opacity = 0;
-              text2.style.opacity = 1;
-              title2.style.opacity =1;
-              break;
-            case 2:
-              img3.style.opacity = 1;
-              text3.style.opacity = 1;
-              title3.style.opacity =1;
-              text2.style.opacity = 0;
-              title2.style.opacity = 0;
-              break;
-            case 3:
-              img4.style.opacity = 1;
-              title4.style.opacity = 1;
-              text3.style.opacity = 0;
-              title3.style.opacity = 0;
-              text4.style.opacity = 1;
-              break;
-            default:
-              break;
-          }
-        }
-      });
-    });
-  
-    //Observa cada texto individual, que este en el arrgelo
-    texts.forEach(text => {
-      observador.observe(text);
-    });
-  
-  
-    
-  });
-  
-  
-  
-  
-  // document.addEventListener('DOMContentLoaded', function () {
-  //     const containers = document.querySelectorAll('.s6-sticky-container');
-  //     let currentContainerIndex = 0;
-  
-  //     function handleScroll() {
-  //       containers.forEach(function (container, index) {
-  //         const rect = container.getBoundingClientRect();
-  //         const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-  
-  //         if (isVisible) {
-  //           switchContainer(index);
-  //         }
-  //       });
-  //     }
-  
-  //     function switchContainer(index) {
-  //       if (currentContainerIndex !== index) {
-  //         currentContainerIndex = index;
-  //         updateContent();
-  //       }
-  //     }
-  
-  //     function updateContent() {
-  //       containers.forEach(function (container, index) {
-  //         const opacity = index === currentContainerIndex ? 1 : 0;
-  //         container.querySelector('.sticky-image').style.opacity = opacity;
-  //         container.querySelector('.text-container').style.opacity = opacity;
-  //       });
-  //     }
-  
-  //     window.addEventListener('scroll', handleScroll);
-  //   });
+    game_1.classList.add("mostrar-imagen");
+    game_2.classList.remove("mostrar-imagen");
+} 
+
+else if(value >= -800 && value <= -201){
+    game_1.classList.remove("mostrar-imagen")
+    game_2.classList.add("mostrar-imagen")
+    game_3.classList.remove("mostrar-imagen")
+}
+
+else if(value >= -1100 && value <= -801){
+  game_2.classList.remove("mostrar-imagen")
+  game_3.classList.add("mostrar-imagen")
+  game_4.classList.remove("mostrar-imagen")
+}
+
+else if(value >= -1800 && value <= -1100){
+  game_3.classList.remove("mostrar-imagen")
+  game_4.classList.add("mostrar-imagen")
+}
+});
+
