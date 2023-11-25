@@ -381,19 +381,27 @@ html {
 .group-four #card1{
   position: absolute;
   left: 50px;
-  top: -160px;
+  top: -90px;
+
 }
+
+.group-four #card1:hover,.group-four #card2:hover,.group-four #card3:hover{
+  transform: skewY(10deg) skewX(-20deg) scale(1.1);
+  transition: all .5s ease-in-out;
+  z-index: 10;
+}
+
 .group-four #card2{
   position: absolute;
   left: 20px;
-  top: -20px;
+  top: 70px;
 }
 .group-four #card3{
   position: absolute;
   left: 53px;
-  top: 167px;
+  top: 250px;
 }
-
+ 
 
 
 
@@ -479,7 +487,7 @@ html {
 
     /* ---------------imagenes scroll ----------------*/
     .tituloSeccion-5{
-      position: absolute;
+     
       top: 4150px;
       margin-left: 100px;
       width: 802px;
@@ -500,7 +508,9 @@ html {
 
       
   }
-  
+  .contenido contenido-0{
+    top:300;
+  }
   
   .contenido-datos{
       display: grid;
@@ -524,8 +534,9 @@ html {
   
   .contenido img{
       position: sticky;
-      width: 552px;
+      width: 556px;
       height: 302.762px;
+      top:150px;
       
       
   }
@@ -533,8 +544,23 @@ html {
   .contenido-texto{
       display: flex;
       flex-direction: column;
-      width: 650px;
+      width: 500px;
+      animation: fade linear;
+      animation-timeline: view();
       
+      
+  }
+  @keyframes fade{
+    0%{
+      opacity: 0;
+    }20%{
+      opacity: 0.4;
+    }40%{
+      opacity: 0.7;
+    }
+    100%{
+      opacity: 1;
+    }
   }
   
   .contenidos-textos{
@@ -543,7 +569,7 @@ html {
       display: grid;
       flex-direction: column;
       margin-left: 700px;
-      top: 30px;
+      top: -35px;
   }
   
   .contenido-texto h2{
