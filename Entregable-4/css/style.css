@@ -634,11 +634,12 @@ html {
 .textoInscribirse p{
   width: 30em;
   font-size: 22px;
+  margin-top: 90px;
 }
 .advertencia{
   position: absolute;
-  top: 560px;
-  left: 320px;
+  top: 625px;
+  left: 330px;
 }
 
 .underline{
@@ -646,6 +647,9 @@ html {
 }
 div.inputMail {
   display: flex;
+  position: absolute;
+  margin-top: 46px;
+  top:  220px;
 
  }
  
@@ -888,9 +892,13 @@ img.img-loader{
 .sprite{
   width:300px ;
   height: 161px;
+  position: absolute;
+  display: flex;
+  top:  628px;
   background-image: url("../img/personaje.png");
-  margin: 50px;
+  margin-left: 600px;
   animation: correr 0.8s steps(5) infinite;
+
   
   
 }
@@ -903,4 +911,21 @@ img.img-loader{
     background-position: 1501px;
 
   }
+}
+
+.spidersprisheetSpider1{
+  top:  1000px;
+  margin-left: 218px;
+}
+.spidersprisheetSpider1,.spidersprisheetSpider2,.spidersprisheetSpider3{
+  position: absolute;
+  display: flex;
+}
+.spidersprisheetSpider2{
+  top:  930px;
+  margin-left: 535px;
+}
+.spidersprisheetSpider3{
+  top:  830px;
+  margin-left: 1000px;
 }
