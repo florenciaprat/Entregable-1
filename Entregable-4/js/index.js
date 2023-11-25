@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', function () {});});
-
-
-
-
 //selecciono cada clase y lo almaceno
 let game_1 = document.querySelector(".contenido-0");
 let game_2 = document.querySelector(".contenido-1");
@@ -29,15 +25,18 @@ else if(value >= -800 && value <= -201){
     game_3.classList.remove("mostrar-imagen")
 }
 
-else if(value >= -1100 && value <= -801){
+else if(value >= -1200 && value <= -801){
   game_2.classList.remove("mostrar-imagen")
   game_3.classList.add("mostrar-imagen")
   game_4.classList.remove("mostrar-imagen")
 }
 
-else if(value >= -1800 && value <= -1100){
+else if(value >= -1400 && value <= -1201){
   game_3.classList.remove("mostrar-imagen")
   game_4.classList.add("mostrar-imagen")
+}
+else if(value < -1401){
+  game_4.classList.remove("mostrar-imagen")
 }
 });
 

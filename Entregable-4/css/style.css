@@ -3,7 +3,7 @@ body {
   margin: 0 auto;
   padding: 0;
   max-width: 1280px;
-  height: 8968px;
+ 
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;  
 
@@ -61,6 +61,7 @@ html {
     left: 100px;
     top: 20px;
   }
+
   
   
   #linea-1, #linea-2, #linea-3 {
@@ -75,23 +76,42 @@ html {
     box-shadow: 5px 5px rgba(2, 24, 126, 1);
   }
 
-  /* Opcional Menu hamburguesa*/
-  #linea-1.activar-linea-1 {
+/* -------Opcional Menu hamburguesa----------------------------------*/
+/* Definimos los keyframes */
+@keyframes animacion-linea-1 {
+  to {
     transform: rotate(45deg) translate(-2px, -5px);
-    box-shadow:none;
-    
+    box-shadow: none;
   }
-  
-  #linea-2.activar-linea-2 {
+}
+
+@keyframes animacion-linea-2 {
+  to {
     opacity: 0;
     margin-left: -30px;
   }
-  
-  #linea-3.activar-linea-3 {
+}
+
+@keyframes animacion-linea-3 {
+  to {
     transform: rotate(-45deg) translate(7px, 7px);
-    box-shadow:none;
+    box-shadow: none;
   }
-  /* Fin opcional */
+}
+
+/* Le pone los keyframes a los elementos en estado de hover */
+#btn-menu:hover #linea-1 {
+  animation: animacion-linea-1 0.5s forwards; 
+}
+
+#btn-menu:hover #linea-2 {
+  animation: animacion-linea-2 0.5s forwards;
+}
+
+#btn-menu:hover #linea-3 {
+  animation: animacion-linea-3 0.5s forwards;
+}
+/*-------------- Fin opcional --------------------------------*/
   
   #btn-comprar {
     position: absolute;
@@ -109,10 +129,11 @@ html {
     box-shadow: 5px 5px rgba(2, 24, 126, 1);
     -webkit-text-stroke: 1px #02187E;
     cursor: pointer;
+    margin-right: 60px;
     transition: transform 0.3s ease; /* Agregamos una transición de 0.3 segundos en la propiedad transform */
 }
 
-#btn-comprar:hover {
+#btn-comprar:hover, #btn-comprar-ahora:hover {
   transform: scale(1.1); /* Cambiamos la escala al hacer hover */
   background-color: #ffaf01;
 }
@@ -372,6 +393,17 @@ html {
   left: 53px;
   top: 167px;
 }
+
+
+
+
+
+
+
+
+
+
+
 /**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
 .seccionFive{
   background-color: black ;
@@ -382,6 +414,7 @@ html {
   height: 1000px;
   display: flex;
   justify-content: center;
+
 }
 
 .seccionFive #title{
@@ -394,7 +427,7 @@ html {
 .seccionFive #phanter{
   position: absolute;
   right: 240px;
-  top: 220px;
+  top: 275px;
   z-index: 1;
 }
 .seccionFive #elastic{
@@ -413,17 +446,32 @@ html {
   position: relative;
   top: 490px;
   left: 0px;
+  
 }
 .seccionFive .fondo #part2{
   position: absolute;
   left: 0px;
   z-index: 5;
+  
 }
 .seccionFive .fondo #part3{
   position: absolute;
   left: 0px;
   z-index: 3;
+   
+
 }
+#phanter{
+  width:700px ;
+  height:700x ;
+  
+}
+
+.seccionFive .fondo #sky{
+  box-shadow: 0px 0px 70px;
+
+}
+
 
 /**************** SECCION 6 "Mas amigos, mas diversión!" ****************/
 
@@ -440,50 +488,53 @@ html {
       font-style: normal;
       font-weight: 600;
       line-height: 94.5%; /* 56.7px */
+      top:4200px;
+
       }
   
   
   .datos-juego{
-      position: absolute;
-      display: grid;
-      top: 4500px;
+      position: sticky;
+     
       width: 1280px;
+
       
   }
   
-  .datos-juego h1{
-      
-      font-family: sans-serif;
-      font-size: xx-large
-  }
   
   .contenido-datos{
       display: grid;
       justify-items: start;
       margin-left: 100px;
-      min-height: 1900px;
+      min-height: 2000px;
+      
+     
   }
   
   .contenido-datos img{
       top: 10%;
+      
   }
   
   .contenido{
       display: flex;
       position: sticky;
-      width: 80%;
+      
   }
   
   .contenido img{
       position: sticky;
       width: 552px;
       height: 302.762px;
+      
+      
   }
   
   .contenido-texto{
       display: flex;
       flex-direction: column;
       width: 650px;
+      
   }
   
   .contenidos-textos{
@@ -492,19 +543,17 @@ html {
       display: grid;
       flex-direction: column;
       margin-left: 700px;
-    
-  
+      top: 30px;
   }
   
   .contenido-texto h2{
-      
       font-size: xx-large
-     
   }
   
   .contenido-0, .contenido-1, .contenido-2, .contenido-3{
       visibility: hidden;
       position: absolute;
+      
   }
   
   .mostrar-imagen{
@@ -559,29 +608,33 @@ html {
   -webkit-text-stroke: 1px #02187E;
 }
 .container {
-  
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s;
   background-color: #fff; 
-  height: 700px;
+  height: 719px;
   clip-path: polygon(0 0, 90% 30, 100% 100%, 0% 100%);
 }
 
 .personaje {
-  
   transition: transform 0.3s, filter 0.3s, opacity 0.3s;
 }
 #personajes:hover .personaje:not(:hover) {
   transform: scale(0.8);
   filter: blur(1px);
   opacity: 0.6;
+  z-index: 1;  
 }
-#personajes:hover .personaje:hover {
-  transform: scale(1.3);
-  cursor: pointer;
+.container:hover{
+  background-color: rgba(255, 0, 167, 0.4);
+  border-top: 30px solid rgba(201, 43, 148, 1);
+  border-bottom: 30px solid rgba(201, 43, 148, 1);
+  transform: skewY(-5deg);
+  z-index: -1;
 }
+
+
 
 /**************** SECCION 8 "Lo último de SPIDEY Y SUS AMIGOS en tu buzón de correo electrónico" ****************/
 .theLast {

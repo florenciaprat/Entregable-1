@@ -98,4 +98,3 @@ document.addEventListener('scroll', fadeIn);
 fadeIn();
  //---------------------------SECCION 6 --------------------------------------
  
-  
