@@ -16,7 +16,7 @@ html {
 
 /****************----HEADER----- ****************/
   header {
-    z-index: 2;
+    z-index: 24049;
     background: linear-gradient(to bottom,#5499F8 75%, #5498f800 95%);
     position: absolute;
     top: 0;
@@ -25,7 +25,7 @@ html {
     height: 227px;
     display: flex;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
   }
   
   header.fixed {
@@ -149,7 +149,7 @@ html {
   display: flex;
   overflow: hidden;
   background-repeat: repeat-x;
-  animation: scroll 40s infinite linear;
+  animation: scroll 60s infinite linear;
 }
 
 @keyframes scroll {
@@ -157,11 +157,10 @@ html {
   100% {background-position-x: -1240px;}
 }
 
-#seccion-1 img#edificio1, 
-#seccion-1 img#edificio2,
-#seccion-1 img#edificio3 {
+#seccion-1 img#edificio1,#seccion-1 img#edificio2, #seccion-1 img#edificio3 {
   position: absolute;
   z-index: 3;
+  transition: all 3s; 
 }
 
 #seccion-1 img#edificio1 {
@@ -213,8 +212,7 @@ html {
   right: 10%;
   top: 209px;
 }
-#seccion-1 img#tela-araña-izq,
-#seccion-1 img#tela-araña-der {
+#seccion-1 img#tela-araña-izq, #seccion-1 img#tela-araña-der {
   position: absolute;
   z-index: 10;
   display: block;
@@ -225,11 +223,15 @@ html {
 #seccion-1 img#tela-araña-izq {
   left: 0;
   bottom: -70px;
+  transition: all 1s; 
+
 }
 
 #seccion-1 img#tela-araña-der {
   right: -40px;
   bottom: 200px;
+  transition: all 1.5s; 
+
 
 }
 
