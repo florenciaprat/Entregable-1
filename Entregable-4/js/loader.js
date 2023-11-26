@@ -12,7 +12,7 @@ let progress = setInterval(() => {
     if(progressStartValue == progressEndValue){
         clearInterval(progress);
        
-         location.href ="index2.html";
+         location.href ="home.html";
             
     }    
 }, speed);

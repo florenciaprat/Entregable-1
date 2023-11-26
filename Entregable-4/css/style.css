@@ -516,7 +516,7 @@ html {
       display: grid;
       justify-items: start;
       margin-left: 100px;
-      min-height: 2000px;
+      min-height: 1800px;
       
      
   }
@@ -637,28 +637,12 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s;
-  background-color: #fff; 
-  height: 719px;
-  clip-path: polygon(0 0, 90% 30, 100% 100%, 0% 100%);
+  height: 749px;
+  background-color:transparent;
 }
 
-.personaje {
-  transition: transform 0.3s, filter 0.3s, opacity 0.3s;
-}
-#personajes:hover .personaje:not(:hover) {
-  transform: scale(0.8);
-  filter: blur(1px);
-  opacity: 0.6;
-  z-index: 1;  
-}
-.container:hover{
-  background-color: rgba(255, 0, 167, 0.4);
-  border-top: 30px solid rgba(201, 43, 148, 1);
-  border-bottom: 30px solid rgba(201, 43, 148, 1);
-  transform: skewY(-5deg);
-  z-index: -1;
-}
+
+
 
 
 

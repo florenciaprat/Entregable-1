@@ -96,5 +96,80 @@ document.addEventListener('scroll', fadeIn);
 
 // Llama a la función inicialmente para aplicar clases si es necesario al cargar la página
 fadeIn();
- //---------------------------SECCION 6 --------------------------------------
- 
+ //---------------------------SECCION 7 --------------------------------------
+let blanco = document.getElementById('personaje-1');
+let rojo = document.getElementById('personaje-2');
+let negro = document.getElementById('personaje-3');
+let section7 = document.getElementById('personajes');
+
+
+blanco.addEventListener('mouseover', function(){
+    section7.style.backgroundImage = 'url("./img/seccion7/rosa.png")';
+    section7.style.backgroundRepeat = 'no-repeat';
+    section7.style.backgroundSize = '100% 880px';
+    blanco.style.transform = 'scale(1.05)';
+    blanco.style.filter= 'blur(0)';
+    rojo.style.transform = 'scale(0.7)';
+    rojo.style.filter= 'blur(5px)';
+    negro.style.transform = 'scale(0.7)';
+    negro.style.filter= 'blur(5px)';
+});
+
+rojo.addEventListener('mouseover', function(){
+    section7.style.backgroundImage = 'url("./img/seccion7/azul.png")';
+    section7.style.backgroundRepeat = 'no-repeat';
+  
+    rojo.style.transform= 'scale(1.1)';
+    rojo.style.filter= 'blur(0)';
+    blanco.style.transform = 'scale(0.7)';
+    blanco.style.filter= 'blur(5px)';
+    negro.style.transform = 'scale(0.7)';
+    negro.style.filter= 'blur(5px)';
+
+});
+
+negro.addEventListener('mouseover', function(){
+    section7.style.backgroundImage = 'url("./img/seccion7/gris.png")';
+    section7.style.backgroundRepeat = 'no-repeat';
+    negro.style.transform ='scale(1.1)';
+    negro.style.filter= 'blur(0)';
+    blanco.style.transform = 'scale(0.7)';
+    blanco.style.filter= 'blur(5px)';
+    rojo.style.transform = 'scale(0.7)';
+    rojo.style.filter= 'blur(5px)';
+
+});
+
+negro.addEventListener('mouseout', function(){
+    section7.style.backgroundImage= 'url("./img/seccion7/blanco.png")';
+    section7.style.backgroundRepeat = 'no-repeat';
+    negro.style.transform ='scale(1)';
+    negro.style.filter= 'blur(0)';
+    blanco.style.transform = 'scale(1)';
+    blanco.style.filter= 'blur(0)';
+    rojo.style.transform = 'scale(1)';
+    rojo.style.filter= 'blur(0)';
+
+});
+blanco.addEventListener('mouseout', function(){
+    section7.style.backgroundImage= 'url("./img/seccion7/blanco.png")';
+    section7.style.backgroundRepeat = 'no-repeat';
+    negro.style.transform ='scale(1)';
+    negro.style.filter= 'blur(0)';
+    blanco.style.transform = 'scale(1)';
+    blanco.style.filter= 'blur(0)';
+    rojo.style.transform = 'scale(1)';
+    rojo.style.filter= 'blur(0)';
+
+});
+rojo.addEventListener('mouseout', function(){
+    section7.style.backgroundImage= 'url("./img/seccion7/blanco.png")';
+    section7.style.backgroundRepeat = 'no-repeat';
+    negro.style.transform ='scale(1)';
+    negro.style.filter= 'blur(0)';
+    blanco.style.transform = 'scale(1)';
+    blanco.style.filter= 'blur(0)';
+    rojo.style.transform = 'scale(1)';
+    rojo.style.filter= 'blur(0)';
+
+});
