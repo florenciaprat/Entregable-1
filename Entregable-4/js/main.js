@@ -103,6 +103,21 @@ document.addEventListener('scroll', fadeIn);
 
 // Llama a la función inicialmente para aplicar clases si es necesario al cargar la página
 fadeIn();
+
+
+//Cuando el usuario hace scroll en la página
+document.addEventListener("scroll", () => {
+    //almacena la posición actual de desplazamiento vertical de la ventana
+    let posScroll = window.scrollY;
+
+    let s3Cards = document.querySelector('.groupfour');
+    
+    //aplicando una transformación de traducción vertical (translateY) con un 
+    //valor que depende de la posición de desplazamiento (posScroll). Multiplicar posScroll 
+    //por -0.2 significa que la tarjeta se moverá hacia arriba 
+    s3Cards.style.transform = "translateY("+posScroll*-0.2+"px)";
+})
+
  //---------------------------SECCION 7 --------------------------------------
 let blanco = document.getElementById('personaje-1');
 let rojo = document.getElementById('personaje-2');
