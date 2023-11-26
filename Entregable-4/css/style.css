@@ -143,16 +143,12 @@ html {
 
 #seccion-1 {
   position: relative;
-  /* z-index: 1; */
   background: url("/TPInterfaces/Entregable-4/img/Seccion1/fondo1.png");
-  /* background-size:contain; */
   height: 850px;
   margin-top: 126px;
   display: flex;
   overflow: hidden;
-
   background-repeat: repeat-x;
-  /* background-size: cover; */
   animation: scroll 40s infinite linear;
 }
 
@@ -194,7 +190,6 @@ html {
 #seccion-1 img#personaje3 {
   position: absolute;
   z-index: 6;
-  /* transform: translate(0px, 0px);*/
   transition: transform 0.5s; 
 }
 
@@ -208,7 +203,6 @@ html {
 #seccion-1 img#personaje2 {
   width: 465px;
   height: 465px;
-  /* left: 33.3%; */
   left: 35%;
   top: 277px;
 }
@@ -217,7 +211,6 @@ html {
   width: 393px;
   height: 393px;
   right: 10%;
-  /* right: 170px; */
   top: 209px;
 }
 #seccion-1 img#tela-araña-izq,
@@ -414,8 +407,11 @@ html {
 
 /**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
 .seccionFive{
-  background-color: black ;
-  /*clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 85%); PONER LA IMAGEN ARRIBA */ 
+  background-image: url(/TPInterfaces/Entregable-4/img/Seccion5/fondoDiv.png);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center; 
+  background-color: #fff;
   position: relative;
   width: 100%;
   top: -100px;
@@ -427,11 +423,12 @@ html {
 
 .seccionFive #title{
   position: absolute;
-  top: 260px;
+  top: 210px;
   color: #FFF;
-  width: 667px;
+  width: 507px;
   left: 104px;
-}
+  font-size: 50px;
+}  
 .seccionFive #phanter{
   position: absolute;
   right: 240px;
@@ -614,7 +611,7 @@ html {
 }
 .fraseTioBen{
   margin-top: -50px;
-  margin-left: 50px;
+  margin-left: 70px;
   align-items: center;
   color: #FFFF;
   font-size: 50px;
@@ -951,7 +948,7 @@ img.img-loader{
 }
 
 
-/*-------------SPRIDESHEET PUNTO 13----------------------*/
+/*--------------------------------------------SPRIDESHEET PUNTO 13--------------------------------------------*/
 .sprite{
   width:300px ;
   height: 161px;
