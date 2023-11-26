@@ -15,11 +15,13 @@ window.onscroll = function() {
     let telaArañaIzq = document.querySelector("#tela-araña-izq");
     let telaArañaDer = document.querySelector("#tela-araña-der");
     //Si se scrolleó se fija el header
-    
+
+    //HEADER - Deja el header sin fijar en su tamaño original
     if (window.scrollY > 0) {
         header.classList.add("fixed");
         logo.classList.add("fixed-img");
-// ---------------------------------------SECCION 1-------------------------------------------------------------//
+// ---------------------------------------SECCION 1-------------------------------------------------------------
+  //--cuando se scrollea se le da movimiento a los personajes
         personaje1.style.transform = 'translate(-40px, 20px)';
         personaje2.style.transform = 'translate(0px, 40px)';
         personaje3.style.transform = 'translate(40px, 20px)';
@@ -30,8 +32,11 @@ window.onscroll = function() {
     } 
     //Sino, lo deja grande
     else {
+        // Deja el header sin fijar en su tamaño original
         header.classList.remove("fixed");
         logo.classList.remove("fixed-img");
+
+        //Deja los elementos de la seccion 1 con sus estilos originales 
         personaje1.style.transform = 'translate(0px, 0px)';
         personaje2.style.transform = 'translate(0px, 0px)';
         personaje3.style.transform = 'translate(0px, 0px)';
@@ -42,16 +47,19 @@ window.onscroll = function() {
     }
 }
 // ---------------------------SECCION 2// *CONOCE A SPIDEY Y SUS SORPRENDENTES AMIGOS*------------------------------------------------------------//
-let posPersonaje4 = document.querySelector("#personaje4");
-let posPersonaje4Top = posPersonaje4.getBoundingClientRect().top;
-let posPersonaje4Bottom = posPersonaje4.getBoundingClientRect().bottom;
-  
-//Si la posicion del scroll esta dentro de la posicion del personaje de la sección
-if (((window.scrollY >= posPersonaje4Top+200))&&((posPersonaje4Bottom+100)>=window.scrollY)){
-  let scrolled = window.scrollY;
+const parallaxDuende = document.getElementById('personaje4');
+let initialTopDuende = -10;
 
-  posPersonaje4.style.transform = 'translateY(' + scrolled * 0.2 + 'px)';
-}
+window.addEventListener('scroll', function () {
+    let offset = window.scrollY;
+
+    let newPosition = initialTopDuende + offset * 0.3;
+
+    if (newPosition < 220 && offset > 320) {
+        parallaxDuende.style.top = newPosition + 'px';
+        
+    }
+});
 // --------------------------------------SECCION 3------------------------------------------------------------//
 // Agrega o quita la clase fade-in dependiendo si la sección está visible dentro de la ventana o no
 function fadeIn() {
@@ -81,13 +89,12 @@ function fadeIn() {
     // Cuando ya no se cumple (ya no es visible la sección), se le quita la clase
     else {
       card1.classList.remove('fade-in');
-      // card1.classList.add('oculto');
+      
       
       card2.classList.remove('fade-in');
-      // card2.classList.add('oculto');
-      
+
       card3.classList.remove('fade-in');
-      // card3.classList.add('oculto');
+  
     }
 }
     
