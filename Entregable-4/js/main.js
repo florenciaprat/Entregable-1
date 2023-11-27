@@ -1,4 +1,3 @@
-
 // Cuando se scrollea la ventana, se llama a la funcion que determina:
 window.onscroll = function() {
   
@@ -6,7 +5,6 @@ window.onscroll = function() {
   
     let header = document.querySelector("#header");
     let logo = document.querySelector("#logo");
-    // let seccion1 = document.querySelector("#seccion-1");
     
     let personaje1 = document.querySelector("#personaje1");
     let personaje2 = document.querySelector("#personaje2");
@@ -47,15 +45,21 @@ window.onscroll = function() {
     }
 }
 // ---------------------------SECCION 2// *CONOCE A SPIDEY Y SUS SORPRENDENTES AMIGOS*------------------------------------------------------------//
+//ajustar su posición vertical en respuesta al desplazamiento de la página.
 const parallaxDuende = document.getElementById('personaje4');
-let initialTopDuende = -10;
+let initialTopDuende = -10; //Este valor representa la posición inicial superior del elemento 
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function () { //Cuando el usuario hace scroll
     let offset = window.scrollY;
 
+    // Esta posición se basa en la posición inicial (initialTopDuende) y se
+    //ajusta por la cantidad de desplazamiento (offset) multiplicada por 0.3
+    // y el elemento se mueve a una velocidad,de la velocidad de desplazamiento.
     let newPosition = initialTopDuende + offset * 0.3;
 
+    //controla si esta dentro de un rango de desplazamiento
     if (newPosition < 220 && offset > 320) {
+        //La nueva posición calculada se asigna a esta propiedad, moviendo así el elemento verticalmente.
         parallaxDuende.style.top = newPosition + 'px';
         
     }
@@ -104,6 +108,7 @@ document.addEventListener('scroll', fadeIn);
 // Llama a la función inicialmente para aplicar clases si es necesario al cargar la página
 fadeIn();
 
+//-----------------------------------SECCION 4------------------------------------------------------------------>
 
 //Cuando el usuario hace scroll en la página
 document.addEventListener("scroll", () => {
@@ -119,6 +124,7 @@ document.addEventListener("scroll", () => {
 })
 
  //---------------------------SECCION 7 --------------------------------------
+ //Asignación de elementos del DOM a variables
 let blanco = document.getElementById('personaje-1');
 let rojo = document.getElementById('personaje-2');
 let negro = document.getElementById('personaje-3');

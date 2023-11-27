@@ -147,8 +147,8 @@ html {
   height: 850px;
   margin-top: 126px;
   display: flex;
-  overflow: hidden;
-  background-repeat: repeat-x;
+  overflow: hidden; /* Oculta el desbordamiento de contenido que exceda los límites del elemento*/
+  background-repeat: repeat-x;  /* la imagen de fondo se repetirá solo horizontalmente.*/
   animation: scroll 60s infinite linear;
 }
 
@@ -184,9 +184,7 @@ html {
   bottom: 120px;
 }
 
-#seccion-1 img#personaje1,
-#seccion-1 img#personaje2,
-#seccion-1 img#personaje3 {
+#seccion-1 img#personaje1, #seccion-1 img#personaje2, #seccion-1 img#personaje3 {
   position: absolute;
   z-index: 6;
   transition: transform 0.5s; 
@@ -234,7 +232,6 @@ html {
 
 
 }
-
 
 /**************** SECCION 2 "Conoce a Spidey y sus sorprendentes amigos" ****************/
   #seccion-2 {
@@ -330,6 +327,7 @@ html {
   font-size: 20px;
 }
 
+/*"fadeIn" controla la opacidad (de 0 a 1), y "moverDesdeAbajo" controla el desplazamiento vertical desde abajo.*/
 #card-1.fade-in {
   animation: fadeIn 2s ease-in, moverDesdeAbajo 2s ease-in;
 }
@@ -349,7 +347,8 @@ html {
       opacity:1;  
   }  
 }
-
+ /* Comienza con una translación vertical de 100 píxeles hacia abajo y 
+ termina sin ninguna translación vertical (posición original).*/
 @keyframes moverDesdeAbajo {
   from {
     transform: translateY(100px);
@@ -359,10 +358,9 @@ html {
     transform: translateY(0);
   }
 }
-
-#card-1,
-#card-2, 
-#card-3 {
+/*Aplica la regla de transformación para las tarjetas card-1, card-2, y card-3, estableciendo 
+su posición vertical en 0 (sin desplazamiento).*/
+#card-1,#card-2, #card-3 {
   transform: translateY(0);
 }
 
@@ -382,7 +380,7 @@ html {
 .group-four #card1:hover,.group-four #card2:hover,.group-four #card3:hover{
   transform: skewY(10deg) skewX(-20deg) scale(1.1);
   transition: all .5s ease-in-out;
-  z-index: 10;
+  z-index: 10; /*posición de apilamiento de un elemento en el eje Z*/
 }
 
 .group-four #card2{
@@ -396,21 +394,11 @@ html {
   top: 250px;
 }
  
-
-
-
-
-
-
-
-
-
-
 /**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
 .seccionFive{
   background-image: url(/TPInterfaces/Entregable-4/img/Seccion5/fondoDiv.png);
-  background-repeat: no-repeat;
-  background-size: cover; 
+  background-repeat: no-repeat; /*para que la imagen de fondo no se repita en ninguna dirección*/
+  background-size: cover;  /*Ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor*/
   background-position: center; 
   background-color: #fff;
   position: relative;
@@ -481,8 +469,6 @@ html {
 
 /**************** SECCION 6 "Mas amigos, mas diversión!" ****************/
 
-
-
     /* ---------------imagenes scroll ----------------*/
     .tituloSeccion-5{
      
@@ -493,7 +479,7 @@ html {
       font-size: 60px;
       font-style: normal;
       font-weight: 600;
-      line-height: 94.5%; /* 56.7px */
+      line-height: 94.5%;
       top:4200px;
 
       }
@@ -515,8 +501,6 @@ html {
       justify-items: start;
       margin-left: 100px;
       min-height: 1800px;
-      
-     
   }
   
   .contenido-datos img{
@@ -527,7 +511,6 @@ html {
   .contenido{
       display: flex;
       position: sticky;
-      
   }
   
   .contenido img{
@@ -594,9 +577,6 @@ html {
       margin-left: 100px;
   }
 
-
-
-
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
 #negro{
   background-color: black;
@@ -642,11 +622,6 @@ html {
   z-index: 3000;
   background-color:transparent;
 }
-
-
-
-
-
 
 /**************** SECCION 8 "Lo último de SPIDEY Y SUS AMIGOS en tu buzón de correo electrónico" ****************/
 .theLast {
@@ -753,12 +728,7 @@ div.inputMail {
    -webkit-text-stroke: 1px #FFE901;
  }
 
-
-
-
-
-
-/**************** FOOTER ****************/
+/********************************************** FOOTER ***********************************************************/
 footer{
   width: 100%;
   height: 673px;
@@ -964,10 +934,7 @@ img.img-loader{
   top:  628px;
   background-image: url("../img/personaje.png");
   margin-left: 600px;
-  animation: correr 0.8s steps(5) infinite;
-
-  
-  
+  animation: correr 0.8s steps(5) infinite; /* dividir la animación en 5 pasos discretos.y se repite infinitamente*/
 }
 @keyframes correr{
   0%{
