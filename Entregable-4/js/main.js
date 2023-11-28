@@ -178,7 +178,7 @@ blanco.addEventListener('mouseover', function(){
 });
 
 rojo.addEventListener('mouseover', function(){
-    section7.style.backgroundImage = 'url("img/seccion7/azul.png")';
+    section7.style.backgroundImage = 'url("../../img/seccion7/azul.png")';
     section7.style.backgroundRepeat = 'no-repeat';
   
     rojo.style.transform= 'scale(1.1)';
@@ -191,7 +191,7 @@ rojo.addEventListener('mouseover', function(){
 });
 
 negro.addEventListener('mouseover', function(){
-    section7.style.backgroundImage = 'url("./img/seccion7/gris.png")';
+    section7.style.backgroundImage = 'url("../../img/seccion7/gris.png")';
     section7.style.backgroundRepeat = 'no-repeat';
     negro.style.transform ='scale(1.1)';
     negro.style.filter= 'blur(0)';
@@ -203,7 +203,7 @@ negro.addEventListener('mouseover', function(){
 });
 
 negro.addEventListener('mouseout', function(){
-    section7.style.backgroundImage= 'url("../img/seccion7/blanco.png")';
+    section7.style.backgroundImage= 'url("../../img/seccion7/blanco.png")';
     section7.style.backgroundRepeat = 'no-repeat';
     negro.style.transform ='scale(1)';
     negro.style.filter= 'blur(0)';
