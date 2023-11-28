@@ -214,7 +214,7 @@ negro.addEventListener('mouseout', function(){
 
 });
 blanco.addEventListener('mouseout', function(){
-    section7.style.backgroundImage= 'url("../img/seccion7/blanco.png")';
+    section7.style.backgroundImage= 'url("./img/Seccion7/blanco.png")';
     section7.style.backgroundRepeat = 'no-repeat';
     negro.style.transform ='scale(1)';
     negro.style.filter= 'blur(0)';
