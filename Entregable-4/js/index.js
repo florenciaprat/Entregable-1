@@ -37,7 +37,7 @@ else if(value >= -2000 && value <= -1201){
   game_3.classList.remove("mostrar-imagen")
   game_4.classList.add("mostrar-imagen")
 }
-else if(value < -2001){
+else if(value < -2200){
   game_4.classList.remove("mostrar-imagen")
 }
 });

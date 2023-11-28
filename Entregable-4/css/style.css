@@ -1,4 +1,8 @@
 
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+  :root{
+    --font-family: 'Lato';
+  }
 body {
   margin: 0 auto;
   padding: 0;
@@ -99,18 +103,24 @@ html {
   }
 }
 
+
+
 /* Le pone los keyframes a los elementos en estado de hover */
-#btn-menu:hover #linea-1 {
+.animacion-linea-1 {
   animation: animacion-linea-1 0.5s forwards; 
 }
 
-#btn-menu:hover #linea-2 {
+.animacion-linea-2{
   animation: animacion-linea-2 0.5s forwards;
 }
 
-#btn-menu:hover #linea-3 {
+.animacion-linea-3 {
   animation: animacion-linea-3 0.5s forwards;
 }
+
+
+
+
 /*-------------- Fin opcional --------------------------------*/
   
   #btn-comprar {
@@ -500,7 +510,7 @@ su posición vertical en 0 (sin desplazamiento).*/
       display: grid;
       justify-items: start;
       margin-left: 100px;
-      min-height: 1800px;
+      min-height: 2200px;
   }
   
   .contenido-datos img{
@@ -554,9 +564,16 @@ su posición vertical en 0 (sin desplazamiento).*/
   }
   
   .contenido-texto h2{
-      font-size: xx-large
+      font-size: xx-large;
+      color:black;
   }
-  
+  .contenido-texto p{
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 400px;
+    line-height: 18.9px;  
+    color: black;
+  }
   .contenido-0, .contenido-1, .contenido-2, .contenido-3{
       visibility: hidden;
       position: absolute;
@@ -588,7 +605,7 @@ su posición vertical en 0 (sin desplazamiento).*/
   height: 550px;
 }
 #seccion-7 {
-  
+  height: 1000px;
   background-color: transparent;
 }
 .fraseTioBen{
@@ -601,8 +618,9 @@ su posición vertical en 0 (sin desplazamiento).*/
 #btn-comprar-ahora {
   position: absolute;
   background-color: #FFE901;
-  width: 240px;
+  width: 290px;
   height: 50px;
+  margin-top: -20px;
   border-radius: 30px;
   border: solid 4px #2981FF;
   font-family: 'Lato', sans-serif;
@@ -627,11 +645,13 @@ su posición vertical en 0 (sin desplazamiento).*/
 .theLast {
   height: auto;
   position: relative;
-  top: -300px;
+  top: 230px;
+  
 }
 .backgroundsky {
   height: auto;
   position: relative;
+  
 
 }
 .backgroundsky img {
@@ -643,10 +663,12 @@ su posición vertical en 0 (sin desplazamiento).*/
   position: absolute;
   top:27.5em;
   width: 100%;
+
 }
 
 .buildings img {
   width: 100%;
+  
 }
 .titleSpidey {
   position: absolute;
@@ -727,14 +749,14 @@ div.inputMail {
    color: #FFE901;
    -webkit-text-stroke: 1px #FFE901;
  }
-
+ 
 /********************************************** FOOTER ***********************************************************/
 footer{
   width: 100%;
   height: 673px;
   background-color: #5E5E5D;
   position: relative;
-  top:-440px;
+  top:70px;
 }
 
 .plataforms-container{
@@ -902,6 +924,7 @@ img.img-loader{
 
 .textoCambiante {
   padding: 50px;
+ 
 }
 
 .textoCambiante h3 {
@@ -931,10 +954,10 @@ img.img-loader{
   height: 161px;
   position: absolute;
   display: flex;
-  top:  628px;
+  top:  615px;
   background-image: url("../img/personaje.png");
   margin-left: 600px;
-  animation: correr 0.8s steps(5) infinite; /* dividir la animación en 5 pasos discretos.y se repite infinitamente*/
+  animation: correr 0.8s steps(5) infinite; /* dividir la animación en 5 pasos y se repite infinitamente*/
 }
 @keyframes correr{
   0%{

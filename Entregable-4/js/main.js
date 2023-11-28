@@ -18,6 +18,14 @@ window.onscroll = function() {
     if (window.scrollY > 0) {
         header.classList.add("fixed");
         logo.classList.add("fixed-img");
+
+
+
+
+
+
+
+        
 // ---------------------------------------SECCION 1-------------------------------------------------------------
   //--cuando se scrollea se le da movimiento a los personajes
         personaje1.style.transform = 'translate(-40px, 20px)';
@@ -201,3 +209,23 @@ rojo.addEventListener('mouseout', function(){
     rojo.style.filter= 'blur(0)';
 
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var btnMenu = document.getElementById('btn-menu');
+  var linea1 = document.getElementById('linea-1');
+  var linea2 = document.getElementById('linea-2');
+  var linea3 = document.getElementById('linea-3');
+
+  btnMenu.addEventListener('click', function () {
+    linea1.classList.toggle('animacion-linea-1');
+    linea2.classList.toggle('animacion-linea-2');
+    linea3.classList.toggle('animacion-linea-3');
+    
+  });
+});
+
+  
+  
