@@ -166,7 +166,7 @@ let section7 = document.getElementById('personajes');
 
 
 blanco.addEventListener('mouseover', function(){
-    section7.style.backgroundImage = 'url(".../img/seccion7/rosa.png")';
+    section7.style.backgroundImage = 'url("./img/Seccion7/rosa.png")';
     section7.style.backgroundRepeat = 'no-repeat';
     section7.style.backgroundSize = '100% 880px';
     blanco.style.transform = 'scale(1.05)';
