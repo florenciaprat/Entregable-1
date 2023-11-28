@@ -692,11 +692,20 @@ su posición vertical en 0 (sin desplazamiento).*/
   width: auto;
   left: 320px;
   color: #000;
+  display: flex;
+  flex-direction: column;
 }
-.textoInscribirse p{
+.textoInscribirse p.si{
   width: 30em;
   font-size: 22px;
   margin-top: 90px;
+}
+p.no{
+  width: 30em;
+  font-size: 22px;
+  margin-bottom: 40px;
+  position: absolute;
+  top:150px;
 }
 .advertencia{
   position: absolute;
@@ -706,6 +715,7 @@ su posición vertical en 0 (sin desplazamiento).*/
 
 .underline{
   text-decoration: underline;
+  top:20px
 }
 div.inputMail {
   display: flex;
