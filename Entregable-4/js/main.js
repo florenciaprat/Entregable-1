@@ -14,26 +14,24 @@ window.onscroll = function() {
     let telaArañaDer = document.querySelector("#tela-araña-der");
     //Si se scrolleó se fija el header
 
-    //HEADER - Deja el header sin fijar en su tamaño original
+    //Header - Deja el header sin fijar en su tamaño original
     if (window.scrollY > 0) {
         header.classList.add("fixed");
         logo.classList.add("fixed-img");
 
 
-
-
-
-
-
-        
 // ---------------------------------------SECCION 1-------------------------------------------------------------
-  //--cuando se scrollea se le da movimiento a los personajes
+    //--cuando se scrollea se le da movimiento a los personajes
+    // Accede a la propiedad de estilo "transform" del elemento HTML. 
+    //La propiedad transform se utiliza para aplicar transformaciones 2D o 3D a un elemento.
+  
         personaje1.style.transform = 'translate(-40px, 20px)';
         personaje2.style.transform = 'translate(0px, 40px)';
         personaje3.style.transform = 'translate(40px, 20px)';
   
-        telaArañaIzq.style.transform = 'translate(-120px, 20px)';
-        telaArañaDer.style.transform = 'translate(200px, 20px)';
+        telaArañaIzq.style.transform = 'translate(-120px, 20px)';// la tela se mueve hacia la izquierda (-120px) y hacia abajo (20px).
+        telaArañaDer.style.transform = 'translate(200px, 20px)';//la tela se mueve hacia la derecha (200px) y hacia abajo (20px).
+  
   
     } 
     //Sino, lo deja grande
@@ -130,8 +128,36 @@ document.addEventListener("scroll", () => {
     //por -0.2 significa que la tarjeta se moverá hacia arriba 
     s3Cards.style.transform = "translateY("+posScroll*-0.2+"px)";
 })
+//-----------------------------------SECCION 5------------------------------------------------------------------>
+//Selecciona los elementos HTML
+const section5 = document.querySelector(".seccion5tamanio");
+const pantera = document.querySelector("#phanter");
+const elastic = document.querySelector("#elastic");
+const hulk = document.querySelector("#hulk");
+const hojitas = document.querySelector("#part2");
+const bosque = document.querySelector("#part3");
+const sky = document.querySelector("#sky");
 
- //---------------------------SECCION 7 --------------------------------------
+//Evento de escucha para el movimiento del ratón en la sección con clase "seccion5tamanio"
+section5.addEventListener("mousemove", (e) => {
+// Obtiene las coordenadas X e Y del mouse en la pantalla
+  let posX = e.clientX;
+  let posY = e.clientY;
+
+   // Aplica transformaciones a los elementos seleccionados según la posición del mouse
+   
+   //translateX(${posX  * ...): Desplazamiento horizontal proporcional a la posición horizontal del mouse.
+    //translateY(${posY * ...): Desplazamiento vertical proporcional a la posición vertical del mouse.
+
+  pantera.style.transform = `translateX(${posX * 0.05}px) translateY(${ posY * 0.05}px`;//La velocidad de la movimiento se reduce multiplicando las coordenadas por 0.05.
+  elastic.style.transform = `translateX(${20 + posX * 0.02}px) translateY(${ posY * 0.02 }px`;//desplazamiento adicional de 20 pixels en el eje X.
+  hulk.style.transform = `translateX(${-posX * 0.02}px) translateY(${-20 + posY * 0.02 }px`; //aca esta invertida en el eje x para que se mueva para el otro lado 
+  hojitas.style.transform = `scale(${1 + posY * 0.00002}) `; //cuando el mouse lo moves hacia arriba o hacia abajo, la escala del elemento se ajusta.
+  bosque.style.transform = `translateX(${-posX * 0.005}px) `;
+  sky.style.transform = `translateX(${ posX * 0.005}px) `;
+});
+
+ //------------------------------------------SECCION 7 -------------------------------------------------------------
  //Asignación de elementos del DOM a variables
 let blanco = document.getElementById('personaje-1');
 let rojo = document.getElementById('personaje-2');
